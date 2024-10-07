@@ -4,6 +4,7 @@ body {
   line-height: 1.5;
   margin: 1rem;
   max-width: 768px;
+  padding-right: 300px;
 }
 
 header {
@@ -21,13 +22,27 @@ a {
   text-decoration: none;
 }
 
+.vg-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.vg-nav__item {
+  padding: 0.5rem 1rem;
+}
+
+.vg-nav__item_active {
+  background: #f8f8f8;
+}
+
 .vg-sidebar {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
-  width: 250px;
+  width: 300px;
   background: #f8f8f8;
-  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
   overflow-y: auto;
 }

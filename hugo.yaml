@@ -5,12 +5,15 @@ theme: vg
 
 menus:
   main:
-    - name: Главная страница
+    - name: Главная
       pageRef: /
       weight: 10
-    - name: Все посты
-      pageRef: /post
+    - name: Посты
+      pageRef: /posts
       weight: 20
-    - name: Тэги
-      pageRef: /tags
+    - name: Категории
+      pageRef: /categories
       weight: 30
+    - name: Обо мне
+      pageRef: /about
+      weight: 40
