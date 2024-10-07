@@ -10,6 +10,16 @@
   </header>
 
   <main>
+    <div class="vg-sidebar">
+      <h2>Последние посты</h2>
+
+      <ul>
+        {{ range first 5 (where site.RegularPages "Type" "post") }}
+        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+
     {{ block "main" . }}{{ end }}
   </main>
 
