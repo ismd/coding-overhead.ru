@@ -5,26 +5,34 @@
 </head>
 
 <body>
-  <header>
-    {{ partial "header.html" . }}
-  </header>
+  <div class="vg-page-wrapper">
+    <div class="vg-page">
+      <header>
+        {{ partial "header.html" . }}
+      </header>
 
-  <main>
-    <div class="vg-sidebar">
-      <h2>Последние посты</h2>
+      <main class="vg-main">
+        <div class="vg-main-content">
+          {{ block "main" . }}{{ end }}
+        </div>
 
-      <ul>
-        {{ range first 5 (where site.RegularPages "Type" "post") }}
-        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-        {{ end }}
-      </ul>
+        <div class="vg-sidebar-wrapper">
+          <div class="vg-sidebar">
+            <h2>Последние посты</h2>
+
+            <ul>
+              {{ range first 5 (where site.RegularPages "Type" "post") }}
+              <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        {{ partial "footer.html" . }}
+      </footer>
     </div>
-
-    {{ block "main" . }}{{ end }}
-  </main>
-
-  <footer>
-    {{ partial "footer.html" . }}
-  </footer>
+  </div>
 </body>
 </html>

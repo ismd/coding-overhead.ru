@@ -1,2 +1,9 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<div class="vg-header">
+  <div class="vg-header__logo">
+    <a href="{{ .Site.BaseURL }}">
+      <img src="{{ "logo.svg" | relURL }}" alt="Logo" />
+    </a>
+  </div>
+
+  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+</div>
