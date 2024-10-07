@@ -1,0 +1,16 @@
+baseURL: https://coding-overhead.net/
+languageCode: ru
+title: Coding Overhead
+theme: vg
+
+menus:
+  main:
+    - name: Главная страница
+      pageRef: /
+      weight: 10
+    - name: Все посты
+      pageRef: /post
+      weight: 20
+    - name: Тэги
+      pageRef: /tags
+      weight: 30

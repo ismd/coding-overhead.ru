@@ -1,0 +1,16 @@
+name: V&G
+license: MIT
+licenselink: https://github.com/owner/repo/LICENSE
+description: Theme description
+
+homepage: https://github.com/ismd
+
+# If you have a running demo of the theme
+demosite: https://owner.github.io/repo
+
+tags:
+  - blog
+
+author:
+  name: Vladimir Kosteley
+  homepage: https://github.com/ismd

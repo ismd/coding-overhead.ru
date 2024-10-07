@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <div class="vg-sidebar">
+    <h2>Последние посты</h2>
+    <ul>
+      {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+      <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+
+  {{ .Content }}
+  {{ range site.RegularPages }}
+    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ .Summary }}
+  {{ end }}
+{{ end }}
