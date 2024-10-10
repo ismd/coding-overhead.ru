@@ -7,31 +7,29 @@
 <body>
   <div class="vg-page-wrapper">
     <div class="vg-page">
-      <header>
+      <div class="vg-page-content">
         {{ partial "header.html" . }}
-      </header>
 
-      <main class="vg-main">
-        <div class="vg-main-content">
-          {{ block "main" . }}{{ end }}
-        </div>
-
-        <div class="vg-sidebar-wrapper">
-          <div class="vg-sidebar">
-            <h2>Последние посты</h2>
-
-            <ul>
-              {{ range first 5 (where site.RegularPages "Type" "post") }}
-              <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-              {{ end }}
-            </ul>
+        <main class="vg-main">
+          <div class="vg-main-content">
+            {{ block "main" . }}{{ end }}
           </div>
-        </div>
-      </main>
+        </main>
 
-      <footer>
-        {{ partial "footer.html" . }}
-      </footer>
+        <footer>
+          {{ partial "footer.html" . }}
+        </footer>
+      </div>
+
+      <div class="vg-sidebar">
+        <h2>Последние посты</h2>
+
+        <ul>
+          {{ range first 5 (where site.RegularPages "Type" "post") }}
+          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
     </div>
   </div>
 </body>

@@ -5,9 +5,12 @@ html {
 }
 
 body {
-  color: #222;
-  font-family: sans-serif;
-  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  color: #333;
 }
 
 .vg-page-wrapper {
@@ -19,52 +22,23 @@ body {
 }
 
 .vg-page {
-  max-width: 1024px;
+  max-width: 1140px;
   width: 100%;
-}
-
-header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
-}
-
-footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem;
-}
-
-a {
-  color: #00e;
-  text-decoration: none;
-}
-
-.vg-nav {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
+  background: #F7F8F6;
 }
 
-.vg-nav__item {
-  padding: 0.5rem 1rem;
-}
-
-.vg-nav__item_active {
-  background: #f8f8f8;
+.vg-page-content {
+  width: calc(100% - 300px);
 }
 
 .vg-main {
   display: flex;
-  min-height: calc(100vh - 146px)
+  min-height: calc(100vh - 216px)
 }
 
 .vg-main-content {
   flex: 1;
-  margin-right: 16px;
-  max-width: calc(100% - 316px);
-}
-
-.vg-sidebar-wrapper {
-
 }
 
 .vg-sidebar {
@@ -73,16 +47,59 @@ a {
   right: 0;
   bottom: 0;
   width: 300px;
-  height: 100%;
-  background: #f8f8f8;
-  border-left: 1px solid #ddd;
-  overflow-y: auto;
+  height: 100vh;
+  border-left: 1px solid #222;
 }
 
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* HEADER */
 .vg-header {
   display: flex;
+  height: 100px;
+}
+
+.vg-header__logo {
+  width: 148px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.vg-header__logo a {
+  display: inline-block;
 }
 
 .vg-header__logo img {
-  width: 100px;
+  width: 100%;
 }
+
+.vg-menu-nav {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  font-size: 24px;
+  margin-left: 50px;
+  padding: 0 50px 15px;
+}
+
+.vg-menu-nav__item {
+  margin: 0 15px;
+  white-space: nowrap;
+}
+
+.vg-menu-nav__item_active {
+  font-weight: 700;
+}
+/* END HEADER */
+
+/* FOOTER */
+footer {
+  height: 100px;
+}
+/* END FOOTER */

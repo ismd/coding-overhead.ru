@@ -11,7 +11,7 @@ Renders a menu for the given menu ID.
 {{- $menuID := .menuID }}
 
 {{- with index site.Menus $menuID }}
-  <nav class="vg-nav">
+  <nav class="vg-menu-nav">
     {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
   </nav>
 {{- end }}
@@ -19,10 +19,10 @@ Renders a menu for the given menu ID.
 {{- define "partials/inline/menu/walk.html" }}
   {{- $page := .page }}
   {{- range .menuEntries }}
-    {{- $attrs := dict "href" .URL "class" "vg-nav__item" }}
+    {{- $attrs := dict "href" .URL "class" "vg-menu-nav__item" }}
 
     {{- if $page.IsMenuCurrent .Menu . }}
-      {{- $attrs = merge $attrs (dict "class" "vg-nav__item vg-nav__item_active" "aria-current" "page") }}
+      {{- $attrs = merge $attrs (dict "class" "vg-menu-nav__item vg-menu-nav__item_active" "aria-current" "page") }}
     {{- else if $page.HasMenuCurrent .Menu .}}
       {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
     {{- end }}

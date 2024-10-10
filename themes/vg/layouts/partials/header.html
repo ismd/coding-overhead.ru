@@ -1,4 +1,4 @@
-<div class="vg-header">
+<header class="vg-header">
   <div class="vg-header__logo">
     <a href="{{ .Site.BaseURL }}">
       <img src="{{ "logo.svg" | relURL }}" alt="Logo" />
@@ -6,4 +6,4 @@
   </div>
 
   {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-</div>
+</header>
