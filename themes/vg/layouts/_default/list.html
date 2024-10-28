@@ -1,9 +1,22 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-
+  <div class="vg-posts-list">
   {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
+    <div class="vg-posts-list-item">
+      <div class="vg-posts-list-item__image">
+        <img src="{{ .Params.image }}" alt="{{ .LinkTitle }}" />
+      </div>
+
+      <div class="vg-posts-list-item__content">
+        <div class="vg-posts-list-item__category">Категория</div>
+
+        <!-- TODO -->
+        <div class="vg-posts-list-item__title">
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </div>
+
+        {{ .Summary }}
+      </div>
+    </div>
   {{ end }}
+  </div>
 {{ end }}
