@@ -22,13 +22,25 @@
       </div>
 
       <div class="vg-sidebar">
-        <h2>Последние посты</h2>
+        <div class="vg-sidebar__logo">
+          <img src="{{ .Site.BaseURL }}{{ .Site.Params.logo }}" alt="{{ .Site.Title }}" />
+        </div>
 
-        <ul>
-          {{ range first 5 (where site.RegularPages "Type" "post") }}
-          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        <div class="vg-sidebar__about">
+          Привет, друг! Coding Overhead — это мой личный блог о&nbsp;современных технологиях и&nbsp;полезных утилитах.
+        </div>
+
+        <div class="vg-sidebar-tags">
+          {{ range .Site.Taxonomies.tags.ByCount }}
+          <div class="vg-sidebar-tags__tag">
+            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+          </div>
           {{ end }}
-        </ul>
+        </div>
+
+        <div class="vg-sidebar-link">
+          <a href="{{ .Site.BaseURL }}rss.xml">RSS</a>
+        </div>
       </div>
     </div>
   </div>
