@@ -1,22 +1,31 @@
 {{ define "main" }}
-  <div class="vg-posts-list">
+<div class="vg-posts-list">
   {{ range .Pages }}
-    <div class="vg-posts-list-item">
-      <div class="vg-posts-list-item__image">
-        <img src="{{ .Params.image }}" alt="{{ .LinkTitle }}" />
+  <div class="vg-posts-list-item">
+    <div class="vg-posts-list-item__image">
+      <img src="{{ .Params.image }}" alt="{{ .LinkTitle }}" />
+    </div>
+
+    <div class="vg-posts-list-item__content">
+      <div class="vg-posts-list-item__category">Категория</div>
+
+      <div class="vg-posts-list-item__title">
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
       </div>
 
-      <div class="vg-posts-list-item__content">
-        <div class="vg-posts-list-item__category">Категория</div>
-
-        <!-- TODO -->
-        <div class="vg-posts-list-item__title">
-          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-        </div>
-
+      <div class="vg-posts-list-item__description">
         {{ .Summary }}
       </div>
+
+      <div class="vg-posts-list-item-tags">
+        {{ range .Params.tags }}
+        <div class="vg-posts-list-item-tags__tag">
+          <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+        </div>
+        {{ end }}
+      </div>
     </div>
-  {{ end }}
   </div>
+  {{ end }}
+</div>
 {{ end }}

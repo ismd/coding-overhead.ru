@@ -3,6 +3,10 @@
   --secondary-font: "Iosevka Web", sans-serif;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 body,
 html {
   height: 100%;
@@ -113,10 +117,11 @@ footer {
 
 .vg-posts-list-item {
   display: flex;
+  padding-bottom: 40px;
 }
 
 .vg-posts-list-item__image {
-  width: 286px;
+  width: 200px;
 }
 
 .vg-posts-list-item__image img {
@@ -142,8 +147,43 @@ footer {
 }
 
 .vg-posts-list-item__title {
+  font-family: var(--secondary-font);
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.vg-posts-list-item__title a {
+  color: #367DCB;
+}
+
+.vg-posts-list-item__description {
+}
+
+.vg-posts-list-item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -14px;
+}
+
+.vg-posts-list-item-tags__tag {
+  position: relative;
+  margin: 0 14px;
+}
+
+.vg-posts-list-item-tags__tag:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -14px;
+  top: 2px;
+  bottom: 2px;
+  width: 2px;
+  background-color: #367DCB;
+}
+
+.vg-posts-list-item-tags__tag a {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  color: #367DCB;
 }
 /* END LIST */
