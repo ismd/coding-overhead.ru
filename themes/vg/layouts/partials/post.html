@@ -1,0 +1,34 @@
+{{- $post := .post }}
+{{- $full := .full }}
+
+{{- with $post }}
+<div class="vg-post">
+  <div class="vg-post__content">
+    <div class="vg-post__image">
+      <img src="{{ .Site.BaseURL }}{{ .Params.image }}" alt="{{ .LinkTitle }}">
+    </div>
+
+    <div class="vg-post__summary">
+      <div class="vg-post__category">Категория</div>
+
+      <div class="vg-post__title">
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      </div>
+
+      {{- if not $full }}
+      <div class="vg-post__description">
+        {{- .Summary }}
+      </div>
+      {{- end }}
+
+      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    </div>
+  </div>
+
+  {{- if $full }}
+  <div class="vg-post__text">
+    {{- .Content }}
+  </div>
+  {{- end }}
+</div>
+{{- end }}
