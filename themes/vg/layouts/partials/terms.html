@@ -10,13 +10,13 @@ For a given taxonomy, renders a list of terms assigned to the page.
 {{- $page := .page }}
 {{- $taxonomy := .taxonomy }}
 
-{{- with $page.GetTerms $taxonomy }}
-  {{- $label := (index . 0).Parent.LinkTitle }}
+{{ with $page.GetTerms $taxonomy }}
+  {{ $label := (index . 0).Parent.LinkTitle }}
   <div class="vg-post-tags">
-    {{- range . }}
+    {{ range . }}
     <div class="vg-post-tags__item">
       <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
     </div>
-    {{- end }}
+    {{ end }}
   </div>
-{{- end }}
+{{ end }}

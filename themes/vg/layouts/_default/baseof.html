@@ -39,41 +39,41 @@
         </div>
 
         <div class="vg-sidebar-footer">
-          {{- with resources.Get "icons/youtube.svg" }}
+          {{ with resources.Get "icons/youtube.svg" }}
           <a class="vg-sidebar-footer__item" href="https://youtube.com/" title="YouTube" target="_blank">
-            {{- .Content | safeHTML }}
+            {{ .Content | safeHTML }}
           </a>
-          {{- end }}
+          {{ end }}
 
-          {{- with resources.Get "icons/github.svg" }}
+          {{ with resources.Get "icons/github.svg" }}
           <a class="vg-sidebar-footer__item" href="https://github.com/" title="GitHub" target="_blank">
-            {{- .Content | safeHTML }}
+            {{ .Content | safeHTML }}
           </a>
-          {{- end }}
+          {{ end }}
 
-          {{- with resources.Get "icons/telegram.svg" }}
+          {{ with resources.Get "icons/telegram.svg" }}
           <a class="vg-sidebar-footer__item" href="https://telegram.org/" title="Telegram" target="_blank">
-            {{- .Content | safeHTML }}
+            {{ .Content | safeHTML }}
           </a>
-          {{- end }}
+          {{ end }}
 
-          {{- with resources.Get "icons/twitch.svg" }}
+          {{ with resources.Get "icons/twitch.svg" }}
           <a class="vg-sidebar-footer__item" href="https://twitch.tv/" title="Twitch" target="_blank">
-            {{- .Content | safeHTML }}
+            {{ .Content | safeHTML }}
           </a>
-          {{- end }}
+          {{ end }}
 
-          {{- with resources.Get "icons/discord.svg" }}
+          {{ with resources.Get "icons/discord.svg" }}
           <a class="vg-sidebar-footer__item" href="https://discord.com/" title="Discord" target="_blank">
-            {{- .Content | safeHTML }}
+            {{ .Content | safeHTML }}
           </a>
-          {{- end }}
+          {{ end }}
 
-          {{- with resources.Get "icons/rss.svg" }}
+          {{ with resources.Get "icons/rss.svg" }}
           <a class="vg-sidebar-footer__item" href="{{ $.Site.BaseURL }}rss.xml" title="RSS" target="_blank">
-            {{- .Content | safeHTML }}
+            {{ .Content | safeHTML }}
           </a>
-          {{- end }}
+          {{ end }}
         </div>
       </div>
     </div>

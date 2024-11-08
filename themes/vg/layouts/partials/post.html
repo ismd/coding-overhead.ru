@@ -1,12 +1,17 @@
 {{- $post := .post }}
 {{- $full := .full }}
 
-{{- with $post }}
+{{ with $post }}
 <div class="vg-post">
   <div class="vg-post__content">
+    {{ with $post.Resources.GetMatch "cover.png" }}
+    {{ $resized := .Fill "200x130" }}
     <div class="vg-post__image">
-      <img src="{{ .Site.BaseURL }}{{ .Params.image }}" alt="{{ .LinkTitle }}">
+      <a href="{{ $post.RelPermalink }}">
+        <img src="{{ $resized.RelPermalink }}" alt="{{ .Title }}">
+      </a>
     </div>
+    {{ end }}
 
     <div class="vg-post__summary">
       <div class="vg-post__category">Категория</div>
@@ -15,20 +20,20 @@
         <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
       </div>
 
-      {{- if not $full }}
+      {{ if not $full }}
       <div class="vg-post__description">
-        {{- .Summary }}
+        {{ .Summary }}
       </div>
-      {{- end }}
+      {{ end }}
 
       {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
     </div>
   </div>
 
-  {{- if $full }}
+  {{ if $full }}
   <div class="vg-post__text">
-    {{- .Content }}
+    {{ .Content }}
   </div>
-  {{- end }}
+  {{ end }}
 </div>
-{{- end }}
+{{ end }}
