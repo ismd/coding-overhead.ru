@@ -70,7 +70,7 @@
           {{ end }}
 
           {{ with resources.Get "icons/rss.svg" }}
-          <a class="vg-sidebar-footer__item" href="{{ $.Site.BaseURL }}rss.xml" title="RSS" target="_blank">
+          <a class="vg-sidebar-footer__item" href="{{ "rss.xml" | relURL }}" title="RSS" target="_blank">
             {{ .Content | safeHTML }}
           </a>
           {{ end }}
