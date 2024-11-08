@@ -1,7 +1,7 @@
 <header class="vg-header">
   <div class="vg-header__logo">
     <a href="{{ .Site.BaseURL }}">
-      <img src="{{ .Site.BaseURL }}logo.svg" alt="Logo" />
+      <img src="{{ "logo.svg" | relURL }}" alt="{{ .Site.Title }}" />
     </a>
   </div>
 
