@@ -1,10 +1,14 @@
 :root {
   --main-font: "Montserrat", sans-serif;
   --secondary-font: "Iosevka Web", sans-serif;
+  --main-color: #367DCB;
+  --main-font-color: #333;
+  --background-color-light: #F7F8F6;
+  --background-color-dark: #5E7181;
 }
 
 a {
-  color: #333;
+  color: var(--main-font-color);
   text-decoration: none;
 }
 
@@ -24,7 +28,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   font-style: normal;
-  color: #333;
+  color: var(--main-font-color);
 }
 
 .vg-page-wrapper {
@@ -39,7 +43,7 @@ body {
   max-width: 1440px;
   width: 100%;
   display: flex;
-  background: #F7F8F6;
+  background: var(--background-color-light);
 }
 
 .vg-page-content_with-sidebar {
@@ -63,7 +67,7 @@ body {
   bottom: 0;
   width: 300px;
   height: 100vh;
-  background: #367DCB;
+  background: var(--main-color);
 }
 
 .vg-sidebar-main {
@@ -88,7 +92,7 @@ body {
 
 .vg-sidebar-footer__item svg {
   width: 100%;
-  color: #F7F8F6;
+  color: var(--background-color-light);
 }
 
 .vg-sidebar-footer__item:hover svg {
@@ -98,7 +102,7 @@ body {
 .vg-sidebar__logo {
   width: 220px;
   height: 220px;
-  background: #F7F8F6;
+  background: var(--background-color-light);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -113,7 +117,7 @@ body {
 .vg-sidebar__about {
   padding: 30px 20px 40px;
   font-size: 24px;
-  color: #F7F8F6;
+  color: var(--background-color-light);
   text-align: center;
 }
 
@@ -126,15 +130,15 @@ body {
 .vg-sidebar-tags__tag {
   font-family: var(--secondary-font);
   white-space: nowrap;
-  background: #F7F8F6;
+  background: var(--background-color-light);
   padding: 10px;
-  color: #5E7181;
+  color: var(--background-color-dark);
   text-transform: lowercase;
 }
 
 .vg-sidebar-tags__tag:hover {
   font-weight: 700;
-  color: #367DCB;
+  color: var(--main-color);
   text-decoration: none;
 }
 
@@ -228,7 +232,7 @@ footer {
   display: flex;
   align-items: center;
   height: 40px;
-  background: #5E7181;
+  background: var(--background-color-dark);
   padding: 0 6px;
   margin-bottom: 18px;
 }
@@ -237,7 +241,7 @@ footer {
   text-transform: lowercase;
   font-family: var(--secondary-font);
   font-weight: 700;
-  color: #F7F8F6;
+  color: var(--background-color-light);
 }
 
 .vg-post__title {
@@ -249,7 +253,7 @@ footer {
 }
 
 .vg-post__title a {
-  color: #367DCB;
+  color: var(--main-color);
 }
 
 .vg-post__description {
@@ -276,13 +280,13 @@ footer {
   top: 2px;
   bottom: 2px;
   width: 2px;
-  background-color: #367DCB;
+  background-color: var(--main-color);
 }
 
 .vg-post-tags__item a {
   font-family: var(--secondary-font);
   font-weight: 700;
-  color: #367DCB;
+  color: var(--main-color);
 }
 
 .vg-post__text h1,
@@ -293,7 +297,7 @@ footer {
 .vg-post__text h6 {
   font-family: var(--secondary-font);
   font-weight: 400;
-  color: #367DCB;
+  color: var(--main-color);
 }
 /* END POST */
 
@@ -313,7 +317,7 @@ footer {
 .vg-home__content {
   font-size: 24px;
   font-weight: 700;
-  color: #5E7181;
+  color: var(--background-color-dark);
   text-align: center;
 }
 
@@ -336,7 +340,7 @@ footer {
 .vg-home-social {
   display: block;
   width: 485px;
-  border: 1px solid #5E7181;
+  border: 1px solid var(--background-color-dark);
   text-align: center;
 }
 
@@ -347,11 +351,11 @@ footer {
 
 .vg-home-social__header {
   height: 40px;
-  background: #5E7181;
+  background: var(--background-color-dark);
   font-family: var(--secondary-font);
   font-size: 24px;
   font-weight: 700;
-  color: #F7F8F6;
+  color: var(--background-color-light);
   line-height: 40px;
   padding: 0 20px;
 }
@@ -386,7 +390,7 @@ footer {
   font-family: var(--secondary-font);
   font-size: 24px;
   font-weight: 700;
-  color: #5E7181;
+  color: var(--background-color-dark);
 }
 
 .vg-home-social__footer {
@@ -394,7 +398,7 @@ footer {
   font-family: var(--secondary-font);
   font-size: 24px;
   font-weight: 700;
-  color: #367DCB;
+  color: var(--main-color);
 }
 
 .vg-home-blog-link {
@@ -405,8 +409,8 @@ footer {
   width: 210px;
   height: 130px;
   padding: 20px 30px;
-  background: #367DCB;
-  color: #F7F8F6;
+  background: var(--main-color);
+  color: var(--background-color-light);
   text-align: center;
   font-family: var(--secondary-font);
   font-size: 50px;
@@ -447,9 +451,9 @@ footer {
   right: 0;
   width: 100%;
   height: 200%;
-  background: #367DCB;
+  background: var(--main-color);
   animation: moveDownUp 2s ease-in-out infinite;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #367DCB 30%, #367DCB 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--main-color) 30%, var(--main-color) 100%);
   content: '';
 }
 /* END HOME */
