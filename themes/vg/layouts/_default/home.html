@@ -14,6 +14,10 @@
     {{ with resources.Get "home-logo-bottom.png" }}
     <img src="{{ .RelPermalink }}" alt="logo" class="vg-home__logo vg-home__logo_bottom" />
     {{ end }}
+
+    <div class="vg-home-bottom-left">
+      {{ partial "home/home-blog-link.html" . }}
+    </div>
   </div>
 
   <div class="vg-home__content">
