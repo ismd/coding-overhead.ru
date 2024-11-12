@@ -285,7 +285,16 @@ footer {
   color: #367DCB;
 }
 
-.vg-post__text {}
+.vg-post__text h1,
+.vg-post__text h2,
+.vg-post__text h3,
+.vg-post__text h4,
+.vg-post__text h5,
+.vg-post__text h6 {
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  color: #367DCB;
+}
 /* END POST */
 
 /* HOME */
