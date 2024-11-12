@@ -111,7 +111,7 @@ body {
 }
 
 .vg-sidebar__about {
-  padding: 30px 24px 40px;
+  padding: 30px 20px 40px;
   font-size: 24px;
   color: #F7F8F6;
   text-align: center;
@@ -129,6 +129,13 @@ body {
   background: #F7F8F6;
   padding: 10px;
   color: #5E7181;
+  text-transform: lowercase;
+}
+
+.vg-sidebar-tags__tag:hover {
+  font-weight: 700;
+  color: #367DCB;
+  text-decoration: none;
 }
 
 .vg-sidebar-tags__tag:not(:last-child) {
@@ -145,7 +152,7 @@ body {
 }
 
 .vg-header__logo {
-  padding: 18px;
+  padding: 18px 18px 18px 50px;
 }
 
 .vg-header__logo a {
@@ -177,17 +184,29 @@ body {
 
 /* FOOTER */
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100px;
+  text-align: center;
 }
 /* END FOOTER */
 
 /* POSTS LIST */
+.vg-posts-list {
+  padding: 20px 0;
+}
+
 .vg-posts-list .vg-post {
   padding-bottom: 40px;
 }
 /* END POSTS LIST */
 
 /* POST */
+.vg-post-page {
+  padding: 20px 0;
+}
+
 .vg-post__content {
   display: flex;
 }
@@ -208,7 +227,7 @@ footer {
 .vg-post__category {
   display: flex;
   align-items: center;
-  height: 30px;
+  height: 40px;
   background: #5E7181;
   color: #F7F8F6;
   text-transform: lowercase;
@@ -244,6 +263,7 @@ footer {
 .vg-post-tags__item {
   position: relative;
   margin: 0 14px;
+  text-transform: lowercase;
 }
 
 .vg-post-tags__item:not(:last-child)::after {
@@ -262,9 +282,7 @@ footer {
   color: #367DCB;
 }
 
-.vg-post__text {
-  padding-top: 30px;
-}
+.vg-post__text {}
 /* END POST */
 
 /* HOME */
@@ -283,7 +301,7 @@ footer {
 .vg-home__content {
   font-size: 24px;
   font-weight: 700;
-  color: #F42424;
+  color: #5E7181;
   text-align: center;
 }
 
@@ -305,7 +323,7 @@ footer {
 
 .vg-home-social {
   display: block;
-  width: 405px;
+  width: 485px;
   border: 1px solid #5E7181;
   text-align: center;
 }
@@ -356,11 +374,11 @@ footer {
   font-family: var(--secondary-font);
   font-size: 24px;
   font-weight: 700;
-  color: #367DCB;
+  color: #5E7181;
 }
 
 .vg-home-social__footer {
-  padding: 0 20px 10px 0;
+  padding: 0 20px 10px 20px;
   font-family: var(--secondary-font);
   font-size: 24px;
   font-weight: 700;
