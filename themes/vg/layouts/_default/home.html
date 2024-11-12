@@ -1,8 +1,23 @@
 {{ define "main" }}
-  {{ .Content }}
+<div class="vg-home">
+  <div class="vg-home-center vg-home-center_top">
+    {{ with resources.Get "home-logo-top.png" }}
+    <img src="{{ .RelPermalink }}" alt="logo" class="vg-home__logo vg-home__logo_top" />
+    {{ end }}
 
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+    <div class="vg-home-top-right">
+      {{ partial "home/home-social.html" . }}
+    </div>
+  </div>
+
+  <div class="vg-home-center vg-home-center_bottom">
+    {{ with resources.Get "home-logo-bottom.png" }}
+    <img src="{{ .RelPermalink }}" alt="logo" class="vg-home__logo vg-home__logo_bottom" />
+    {{ end }}
+  </div>
+
+  <div class="vg-home__content">
+    {{ .Content }}
+  </div>
+</div>
 {{ end }}

@@ -7,8 +7,10 @@
 <body>
   <div class="vg-page-wrapper">
     <div class="vg-page">
-      <div class="vg-page-content">
+      <div class="vg-page-content{{ if not .IsHome }} vg-page-content_with-sidebar{{ end }}">
+        {{ block "header" . }}
         {{ partial "header.html" . }}
+        {{ end }}
 
         <main class="vg-main">
           <div class="vg-main-content">
@@ -16,66 +18,16 @@
           </div>
         </main>
 
-        <footer>
-          {{ partial "footer.html" . }}
-        </footer>
+        {{ block "footer" . }}
+        {{ partial "footer.html" . }}
+        {{ end }}
       </div>
 
-      <div class="vg-sidebar">
-        <div class="vg-sidebar-main">
-          <div class="vg-sidebar__logo">
-            <img src="{{ "logo-big.png" | relURL }}" alt="{{ .Site.Title }}" />
-          </div>
-
-          <div class="vg-sidebar__about">
-            Привет, друг! Coding Overhead — это мой личный блог о&nbsp;современных технологиях и&nbsp;полезных утилитах.
-          </div>
-
-          <div class="vg-sidebar-tags">
-            {{ range .Site.Taxonomies.tags.ByCount }}
-            <a class="vg-sidebar-tags__tag" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
-            {{ end }}
-          </div>
-        </div>
-
-        <div class="vg-sidebar-footer">
-          {{ with resources.Get "icons/youtube.svg" }}
-          <a class="vg-sidebar-footer__item" href="https://youtube.com/" title="YouTube" target="_blank">
-            {{ .Content | safeHTML }}
-          </a>
-          {{ end }}
-
-          {{ with resources.Get "icons/github.svg" }}
-          <a class="vg-sidebar-footer__item" href="https://github.com/" title="GitHub" target="_blank">
-            {{ .Content | safeHTML }}
-          </a>
-          {{ end }}
-
-          {{ with resources.Get "icons/telegram.svg" }}
-          <a class="vg-sidebar-footer__item" href="https://telegram.org/" title="Telegram" target="_blank">
-            {{ .Content | safeHTML }}
-          </a>
-          {{ end }}
-
-          {{ with resources.Get "icons/twitch.svg" }}
-          <a class="vg-sidebar-footer__item" href="https://twitch.tv/" title="Twitch" target="_blank">
-            {{ .Content | safeHTML }}
-          </a>
-          {{ end }}
-
-          {{ with resources.Get "icons/discord.svg" }}
-          <a class="vg-sidebar-footer__item" href="https://discord.com/" title="Discord" target="_blank">
-            {{ .Content | safeHTML }}
-          </a>
-          {{ end }}
-
-          {{ with resources.Get "icons/rss.svg" }}
-          <a class="vg-sidebar-footer__item" href="{{ "rss.xml" | relURL }}" title="RSS" target="_blank">
-            {{ .Content | safeHTML }}
-          </a>
-          {{ end }}
-        </div>
-      </div>
+      {{ if not .IsHome }}
+      {{ block "sidebar" . }}
+      {{ partial "sidebar.html" . }}
+      {{ end }}
+      {{ end }}
     </div>
   </div>
 </body>
