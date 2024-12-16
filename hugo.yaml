@@ -17,3 +17,8 @@ menus:
     - name: Обо мне
       pageRef: /about
       weight: 40
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
