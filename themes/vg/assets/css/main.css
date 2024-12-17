@@ -8,7 +8,6 @@
 }
 
 a {
-  color: var(--main-font-color);
   text-decoration: none;
 }
 
@@ -179,6 +178,7 @@ body {
 .vg-menu-nav__item {
   margin: 0 15px;
   white-space: nowrap;
+  color: var(--main-font-color);
 }
 
 .vg-menu-nav__item_active {
