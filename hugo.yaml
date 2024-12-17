@@ -24,3 +24,8 @@ markup:
       unsafe: true
   highlight:
     style: emacs
+
+deployment:
+  targets:
+    - name: production
+      URL: s3://coding-overhead.net
