@@ -295,6 +295,10 @@ footer {
   color: var(--main-color);
 }
 
+.vg-post__text a {
+  color: var(--main-color);
+}
+
 .vg-post__text h1,
 .vg-post__text h2,
 .vg-post__text h3,
