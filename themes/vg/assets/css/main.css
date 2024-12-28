@@ -145,13 +145,15 @@ body {
   margin-right: 15px;
 }
 
-.vg-sidebar-links {}
-
 /* HEADER */
 .vg-header {
   display: flex;
   justify-content: space-between;
   height: 100px;
+}
+
+.vg-header_home {
+  padding-right: 300px;
 }
 
 .vg-header__logo {
