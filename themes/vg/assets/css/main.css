@@ -411,7 +411,8 @@ footer {
   color: var(--main-color);
 }
 
-.vg-home-blog-link {
+.vg-home-blog-link,
+.vg-home-blog-link:visited {
   display: flex;
   flex-direction: column;
   justify-content: center;
