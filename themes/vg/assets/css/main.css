@@ -131,6 +131,20 @@ body {
 
 .vg-sidebar__menu {
   display: none;
+  padding-bottom: 20px;
+}
+
+.vg-sidebar__menu .vg-menu-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
+.vg-sidebar__menu .vg-menu-nav__item {
+  margin: 4px 0;
+  color: var(--background-color-light);
+  font-size: 28px;
 }
 
 .vg-sidebar-tags {
@@ -185,18 +199,6 @@ body {
   .vg-sidebar.is-active {
     width: 100%;
     right: 0;
-  }
-
-  .vg-sidebar .vg-menu-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    top: 80px;
-  }
-
-  .vg-sidebar .vg-menu-nav__item {
-    margin: 10px 0;
   }
 
   .vg-sidebar__menu {

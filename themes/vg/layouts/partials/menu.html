@@ -24,7 +24,7 @@ Renders a menu for the given menu ID.
     {{- if $page.IsMenuCurrent .Menu . }}
       {{- $attrs = merge $attrs (dict "class" "vg-menu-nav__item vg-menu-nav__item_active" "aria-current" "page") }}
     {{- else if $page.HasMenuCurrent .Menu .}}
-      {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
+      {{- $attrs = merge $attrs (dict "class" "vg-menu-nav__item" "aria-current" "true") }}
     {{- end }}
 
     {{- $name := .Name }}
