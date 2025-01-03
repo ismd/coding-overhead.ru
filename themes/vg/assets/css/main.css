@@ -680,10 +680,12 @@ footer {
 
   .vg-home-center_top {
     order: 1;
+    padding-top: 3%;
   }
 
   .vg-home-center_bottom {
     order: 2;
+    padding-top: 11%;
   }
 
   .vg-home-social-content-item {
