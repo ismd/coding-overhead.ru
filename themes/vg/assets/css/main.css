@@ -38,6 +38,11 @@ body {
   color: var(--main-font-color);
 }
 
+body.vg-sidebar-open {
+  overflow: hidden;
+  height: 100%;
+}
+
 .vg-page-wrapper {
   display: flex;
   flex-direction: column;
@@ -74,6 +79,10 @@ body {
   width: 300px;
   background: var(--main-color);
   transition: right 0.4s;
+}
+
+.vg-sidebar_home {
+  right: -300px;
 }
 
 .vg-sidebar-main {
