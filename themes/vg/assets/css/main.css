@@ -91,6 +91,7 @@ body.vg-sidebar-open {
   justify-content: center;
   flex-direction: column;
   min-height: calc(100vh - 80px);
+  box-sizing: border-box;
 }
 
 .vg-sidebar-footer {
@@ -211,6 +212,37 @@ body.vg-sidebar-open {
 
   .vg-sidebar__menu {
     display: block;
+  }
+}
+
+@media (max-height: 1024px) {
+  .vg-sidebar-main {
+    padding-top: 10%;
+  }
+}
+
+@media (max-height: 850px) {
+  .vg-sidebar__menu .vg-menu-nav__item {
+    font-size: 24px;
+  }
+
+  .vg-sidebar__logo {
+    width: 170px;
+    height: 170px;
+  }
+
+  .vg-sidebar__logo img {
+    width: 120px;
+  }
+
+  .vg-sidebar__about {
+    font-size: 20px;
+  }
+}
+
+@media (max-height: 640px) {
+  .vg-sidebar__logo {
+    display: none;
   }
 }
 
