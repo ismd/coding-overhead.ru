@@ -23,10 +23,8 @@
         {{ end }}
       </div>
 
-      {{ if not .IsHome }}
       {{ block "sidebar" . }}
       {{ partial "sidebar.html" . }}
-      {{ end }}
       {{ end }}
     </div>
   </div>
