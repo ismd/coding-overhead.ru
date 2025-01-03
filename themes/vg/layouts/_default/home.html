@@ -1,22 +1,26 @@
 {{ define "main" }}
 <div class="vg-home">
   <div class="vg-home-center vg-home-center_top">
-    {{ with resources.Get "home-logo-top.png" }}
-    <img src="{{ .RelPermalink }}" alt="logo" class="vg-home__logo vg-home__logo_top" />
-    {{ end }}
+    <div class="vg-home-center__logo">
+      {{ with resources.Get "home-logo-top.png" }}
+      <img src="{{ .RelPermalink }}" alt="logo" />
+      {{ end }}
+    </div>
 
-    <div class="vg-home-top-right">
+    <div class="vg-home-center__content">
       {{ partial "home/home-social.html" . }}
     </div>
   </div>
 
   <div class="vg-home-center vg-home-center_bottom">
-    {{ with resources.Get "home-logo-bottom.png" }}
-    <img src="{{ .RelPermalink }}" alt="logo" class="vg-home__logo vg-home__logo_bottom" />
-    {{ end }}
-
-    <div class="vg-home-bottom-left">
+    <div class="vg-home-center__content">
       {{ partial "home/home-blog-link.html" . }}
+    </div>
+
+    <div class="vg-home-center__logo">
+      {{ with resources.Get "home-logo-bottom.png" }}
+      <img src="{{ .RelPermalink }}" alt="logo" />
+      {{ end }}
     </div>
   </div>
 
