@@ -368,6 +368,7 @@ footer {
 
 .vg-post__image {
   width: 200px;
+  padding-right: 30px;
 }
 
 .vg-post__image img {
@@ -376,7 +377,6 @@ footer {
 
 .vg-post__summary {
   flex: 1;
-  padding-left: 30px;
 }
 
 .vg-post__category {
