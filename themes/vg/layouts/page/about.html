@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="vg-about">
+  <h1>{{ .Params.title }}</h1>
+
+  <div class="vg-about-info">
+    <div class="vg-about-info__column vg-about__content">
+      {{ .Content }}
+    </div>
+
+    <div class="vg-about-info__column vg-about-skills">
+      <table>
+        {{ range .Params.skills }}
+        <div class="vg-about-skills-item">
+          <tr>
+            <td>
+              <div class="vg-about-skills-item__title">{{ .name }}</div>
+            </td>
+            <td>
+              <div class="vg-about-skills-item__full-progress">
+                <div class="vg-about-skills-item__progress" style="width: {{ .level }}%"></div>
+              </div>
+            </td>
+          </tr>
+        </div>
+        {{ end }}
+      </table>
+    </div>
+  </div>
+</div>
+{{ end }}
