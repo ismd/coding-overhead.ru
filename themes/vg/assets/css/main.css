@@ -265,7 +265,7 @@ body.vg-sidebar-open {
   }
 }
 
-@media (max-height: 500px) {
+@media (pointer: coarse) {
   .vg-sidebar-tags {
     display: none;
   }
