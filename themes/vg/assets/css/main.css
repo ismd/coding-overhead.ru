@@ -856,7 +856,6 @@ footer {
 
 .vg-about-extended-info-tabs__tab {
   flex: 1;
-  text-align: center;
 }
 
 .vg-about-extended-info-tabs__tab input[type="radio"] {
@@ -871,6 +870,7 @@ footer {
   font-size: 24px;
   font-weight: 700;
   cursor: pointer;
+  text-align: center;
 }
 
 .vg-about-extended-info-tabs__tab input[type="radio"]:checked + label {
