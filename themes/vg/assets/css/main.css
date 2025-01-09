@@ -91,6 +91,7 @@ body.vg-sidebar-open {
   width: 300px;
   background: var(--main-color);
   transition: right 0.4s;
+  z-index: 1000;
 }
 
 .vg-sidebar_home {
@@ -305,7 +306,7 @@ body.vg-sidebar-open {
   height: 70px;
   background: var(--main-color);
   box-sizing: border-box;
-  z-index: 1000;
+  z-index: 1001;
 }
 
 .vg-hamburger__line {
