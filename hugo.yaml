@@ -1,4 +1,4 @@
-baseURL: https://coding-overhead.net/
+baseURL: https://coding-overhead.ru/
 languageCode: ru
 title: Coding Overhead
 theme: vg
@@ -29,4 +29,4 @@ markup:
 deployment:
   targets:
     - name: production
-      URL: s3://coding-overhead.net
+      URL: s3://coding-overhead.ru
