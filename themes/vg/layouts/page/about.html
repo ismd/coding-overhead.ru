@@ -9,21 +9,22 @@
 
     <div class="vg-about-info__column">
       <div class="vg-about-extended-info-tabs">
-        {{ range .Params.tabs }}
-        <div class="vg-about-extended-info-tabs__tab">
-          <input type="radio" name="vg-about-extended-info-tabs" id="vg-about-extended-info-tabs-{{ .id }}" {{ if eq .id 1 }}checked{{ end }}>
-          <label for="vg-about-extended-info-tabs-{{ .id }}">{{ .title }}</label>
-
-          <div class="vg-about-extended-info-tabs__content">
-            <ul>
-              {{ range .items }}
-              <li>{{ . }}</li>
-              {{ end }}
-            </ul>
-          </div>
+        {{ range $index, $el := .Params.tabs }}
+        <div class="vg-about-extended-info-tabs__tab{{ if eq $index 0 }} vg-about-extended-info-tabs__tab_active{{ end }}" data-tab="{{ $index }}">
+          {{ .title }}
         </div>
         {{ end }}
       </div>
+
+      {{ range $index, $el := .Params.tabs }}
+      <div class="vg-about-extended-info-tabs__content{{ if eq $index 0 }} vg-about-extended-info-tabs__content_active{{ end }}" data-tab="{{ $index }}">
+        <ul>
+          {{ range .items }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
     </div>
   </div>
 

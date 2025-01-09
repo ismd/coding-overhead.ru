@@ -868,41 +868,40 @@ footer {
 }
 
 .vg-about-extended-info-tabs__tab {
-  flex: 1;
-  border-right: 1px solid var(--background-color-dark);
-}
-
-.vg-about-extended-info-tabs__tab input[type="radio"] {
-  display: none;
-}
-
-.vg-about-extended-info-tabs__tab label {
   display: block;
   width: 100%;
   padding: 10px 0;
+  flex: 1;
+  border-right: 1px solid var(--background-color-dark);
   font-family: var(--secondary-font);
   font-size: 20px;
   cursor: pointer;
   text-align: center;
 }
 
-.vg-about-extended-info-tabs__tab input[type="radio"]:checked + label {
-  background-color: var(--background-color-dark);
-  color: white;
+.vg-about-extended-info-tabs__tab_active {
+  background: var(--background-color-dark);
+  color: var(--background-color-light);
 }
 
 .vg-about-extended-info-tabs__content {
   display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
+}
+
+.vg-about-extended-info-tabs__content_active {
+  display: block;
 }
 
 .vg-about-extended-info-tabs__content li {
   padding: 8px 0;
 }
 
-.vg-about-extended-info-tabs__tab input[type="radio"]:checked + label + .vg-about-extended-info-tabs__content {
-  display: block;
-}
+@media (max-width: 768px) {
+  .vg-about-info {
+    flex-direction: column;
+  }
+
+  .vg-about-extended-info {
+    flex-direction: column;
+  }
 /* END ABOUT */

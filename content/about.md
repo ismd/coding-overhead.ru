@@ -8,23 +8,20 @@ params:
   info: "<p>Этот блог не&nbsp;обо мне, но&nbsp;всё&nbsp;же меня зовут Владимир, я&nbsp;работаю в&nbsp;крупной IT-компании. Имею опыт разработки более 12&nbsp;лет, часть из&nbsp;которых занимался frontend-разработкой, затем больше увлёкся DevOps&rsquo;ом и&nbsp;Platform Engineering.</p>
 <p>Сфера информационных технологий всегда привлекала и&nbsp;продолжает привлекать меня. Но&nbsp;кроме неё также есть и&nbsp;другие увлечения, которые можете увидеть слева.</p>"
   tabs:    
-    - id: 1
-      title: Инструменты
+    - title: Инструменты
       items:
         - Emacs
         - Docker
         - Git
         - Terraform
         - Kubernetes
-    - id: 2
-      title: Языки
+    - title: Языки
       items:
         - Python
         - TypeScript/JavaScript
         - Go
         - Bash
-    - id: 3
-      title: Окружения
+    - title: Окружения
       items:
         - GNU/Linux
         - Hyprland
