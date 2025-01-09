@@ -1,29 +1,59 @@
 {{ define "main" }}
 <div class="vg-about">
-  <h1>{{ .Params.title }}</h1>
+  <h1>{{ .Params.headline }}</h1>
 
   <div class="vg-about-info">
     <div class="vg-about-info__column vg-about__content">
       {{ .Content }}
     </div>
 
-    <div class="vg-about-info__column vg-about-skills">
-      <table>
-        {{ range .Params.skills }}
-        <div class="vg-about-skills-item">
-          <tr>
-            <td>
-              <div class="vg-about-skills-item__title">{{ .name }}</div>
-            </td>
-            <td>
-              <div class="vg-about-skills-item__full-progress">
-                <div class="vg-about-skills-item__progress" style="width: {{ .level }}%"></div>
-              </div>
-            </td>
-          </tr>
+    <div class="vg-about-info__column">
+      <div class="vg-about-extended-info-tabs">
+        {{ range .Params.tabs }}
+        <div class="vg-about-extended-info-tabs__tab">
+          <input type="radio" name="vg-about-extended-info-tabs" id="vg-about-extended-info-tabs-{{ .id }}" {{ if eq .id 1 }}checked{{ end }}>
+          <label for="vg-about-extended-info-tabs-{{ .id }}">{{ .title }}</label>
+
+          <div class="vg-about-extended-info-tabs__content">
+            <ul>
+              {{ range .items }}
+              <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          </div>
         </div>
         {{ end }}
-      </table>
+      </div>
+    </div>
+  </div>
+
+  <a href="mailto:{{ .Params.email }}" class="vg-about-mailto">Написать мне</a>
+
+  <div class="vg-about-extended-info">
+    <div class="vg-about-extended-info__column">
+      <div class="vg-about-skills">
+        <table>
+          {{ range .Params.skills }}
+          <div class="vg-about-skills-item">
+            <tr>
+              <td>
+                <div class="vg-about-skills-item__title">{{ .title }}</div>
+              </td>
+              <td>
+                <div class="vg-about-skills-item__full-progress">
+                  <div class="vg-about-skills-item__progress" style="width: {{ .level }}%"></div>
+                </div>
+              </td>
+            </tr>
+          </div>
+          {{ end }}
+        </table>
+      </div>
+    </div>
+
+    <div class="vg-about-extended-info__column">
+      В&nbsp;этом блоге делюсь полезными инструкциями и&nbsp;наработками, данный проект создан исключительно для того, чтобы передать знания, которые на&nbsp;мой взгляд могут быть полезными. Здесь можно найти или можно будет найти информацию на&nbsp;темы Linux дистрибутивов, окружений, Docker, Kubernetes и&nbsp;немного прочего. Буду рад, если блог окажется полезным для тебя.
+Предлагай, что полезно было&nbsp;бы рассмотреть в&nbsp;данном блоге&nbsp;&mdash; форма ниже. Сфера моих профессиональных интересов ещё ниже.
     </div>
   </div>
 </div>

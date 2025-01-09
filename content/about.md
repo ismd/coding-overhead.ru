@@ -3,18 +3,42 @@ title: Обо мне
 date: 2025-01-08
 layout: about
 params:
-  title: Привет!
+  headline: Привет!
+  email: coding-overhead@ismd.dev
   skills:
-    - name: Игра на бас-гитаре
-      level: 80
-    - name: Музыка
+    - title: GNU/Linux
+      level: 100
+    - title: Программирование
       level: 90
-    - name: Футбол
+    - title: Музыка / бас-гитара
       level: 80
-    - name: Путешествия
+    - title: Футбол
+      level: 80
+    - title: Путешествия
       level: 70
-    - name: CTF
+    - title: Решение CTF
       level: 30
+  tabs:
+    - id: 1
+      title: Языки
+      items:
+        - Python
+        - TypeScript/JavaScript
+        - Bash
+    - id: 2
+      title: Инструменты
+      items:
+        - Docker
+        - Kubernetes
+        - Git
+        - Ansible
+        - Terraform
+    - id: 3
+      title: Окружения
+      items:
+        - Linux
+        - macOS
+        - Windows  
 ---
 
 Coding Overhead &mdash; это мой блог о программировании и разработке. Я пишу о том, что мне интересно, и надеюсь, что это будет интересно и вам.

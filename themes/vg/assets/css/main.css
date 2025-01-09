@@ -742,15 +742,19 @@ footer {
 
 .vg-about-info {
   display: flex;
-  gap: 10px;
+  gap: 50px;
 }
 
 .vg-about-info__column {
   flex: 1;
 }
 
-.vg-about-skills {
-  padding: 40px 0;
+.vg-about-info__column:first-child {
+  text-align: justify;
+}
+
+.vg-about-info__column:last-child {
+  padding: 20px 0;
 }
 
 .vg-about-skills > table {
@@ -760,6 +764,7 @@ footer {
 
 .vg-about-skills > table td {
   width: 50%;
+  padding: 10px 0;
 }
 
 .vg-about-skills > table tr td:first-child {
@@ -804,6 +809,85 @@ footer {
   height: 16px;
   border-radius: 50%;
   background: var(--main-color);
-  box-shadow: 0 1px 1px 1px rgb(0 0 0 / 15%);
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .15);
+}
+
+.vg-about-skills-item__title {
+  font-family: var(--secondary-font);
+  font-weight: 500;
+}
+
+.vg-about-mailto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 50px;
+  padding: 10px 20px;
+  background: var(--main-color);
+  color: var(--background-color-light);
+}
+
+.vg-about-mailto:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+.vg-about-extended-info {
+  display: flex;
+  gap: 50px;
+}
+
+.vg-about-extended-info__column {
+  flex: 1;
+  min-height: 200px;
+}
+
+.vg-about-extended-info__column:last-child {
+  text-align: justify;
+}
+
+.vg-about-extended-info-tabs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid var(--background-color-dark);
+  position: relative;
+}
+
+.vg-about-extended-info-tabs__tab {
+  flex: 1;
+  text-align: center;
+}
+
+.vg-about-extended-info-tabs__tab input[type="radio"] {
+  display: none;
+}
+
+.vg-about-extended-info-tabs__tab label {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  font-family: var(--secondary-font);
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.vg-about-extended-info-tabs__tab input[type="radio"]:checked + label {
+  background-color: var(--background-color-dark);
+  color: white;
+}
+
+.vg-about-extended-info-tabs__content {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.vg-about-extended-info-tabs__tab input[type="radio"]:checked + label + .vg-about-extended-info-tabs__content {
+  display: block;
 }
 /* END ABOUT */
