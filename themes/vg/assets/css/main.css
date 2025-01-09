@@ -257,14 +257,16 @@ body.vg-sidebar-open {
   .vg-sidebar__about {
     font-size: 20px;
   }
-
-  .vg-sidebar-tags {
-    display: none;
-  }
 }
 
 @media (max-height: 640px) {
   .vg-sidebar__logo {
+    display: none;
+  }
+}
+
+@media (max-height: 500px) {
+  .vg-sidebar-tags {
     display: none;
   }
 }
@@ -908,6 +910,10 @@ footer {
   display: block;
 }
 
+.vg-about-extended-info-tabs__content ul {
+  padding-left: 16px;
+}
+
 .vg-about-extended-info-tabs__content li {
   padding: 8px 0;
 }
@@ -915,9 +921,19 @@ footer {
 @media (max-width: 768px) {
   .vg-about-info {
     flex-direction: column;
+    gap: 20px;
+  }
+
+  .vg-about-info__column:last-child {
+    padding: 0;
   }
 
   .vg-about-extended-info {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .vg-about-extended-info__column .vg-about-skills {
+    padding-top: 0;
   }
 /* END ABOUT */
