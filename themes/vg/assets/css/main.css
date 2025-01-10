@@ -963,6 +963,8 @@ body.vg-sidebar-open {
 /* TAXONOMY */
 .vg-taxonomy {
   display: flex;
+  padding-top: 50px;
+  position: relative;
 }
 
 .vg-taxonomy-list {
@@ -971,6 +973,14 @@ body.vg-sidebar-open {
   gap: 40px;
   position: relative;
   width: 100%;
+  min-height: calc(100vh - 250px);
+  background: var(--background-color-light);
+  transition: width 0.4s;
+  z-index: 1;
+}
+
+.vg-taxonomy-list_open {
+  width: 60%;
 }
 
 .vg-taxonomy-row {
@@ -980,22 +990,18 @@ body.vg-sidebar-open {
   gap: 20px;
   width: 100%;
   height: 65px;
-  background: var(--background-color-light);
-  transition: width 0.4s;
   position: relative;
   z-index: 1;
 }
 
 .vg-taxonomy-row:hover {
+  font-weight: 700;
   text-decoration: none;
 }
 
-.vg-taxonomy-row_open {
-  width: 60%;
-}
-
-.vg-taxonomy-row_selected + .vg-taxonomy-list {
-  display: flex;
+.vg-taxonomy-row:hover .vg-taxonomy-row__button {
+  background: var(--background-color-dark);
+  color: var(--background-color-light);
 }
 
 .vg-taxonomy-row__title {
@@ -1016,22 +1022,40 @@ body.vg-sidebar-open {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 1.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vg-taxonomy-row_selected {
+  font-weight: 700;
+}
+
+.vg-taxonomy-row_selected .vg-taxonomy-row__button {
+  background: var(--background-color-dark);
+  color: var(--background-color-light);
+}
+
+.vg-taxonomy-posts-list-wrapper {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  width: 40%;
 }
 
 .vg-taxonomy-posts-list {
   display: none;
-  width: 40%;
-  position: relative;
-  right: -100%;
+  position: sticky;
+  top: 15px;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
   padding-left: 40px;
   box-sizing: border-box;
 }
 
-.vg-taxonomy-posts-list__content {
-  position: sticky;
-  top: 15px;
+.vg-taxonomy-posts-list_selected {
+  display: flex;
 }
 
 .vg-taxonomy-posts-list .vg-taxonomy-list__item {
@@ -1039,9 +1063,10 @@ body.vg-sidebar-open {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  height: 85px;
+  height: 65px;
   font-size: 24px;
   letter-spacing: 1.2px;
   color: var(--main-color);
+  line-height: 1.2;
 }
 /* END TAXONOMY */

@@ -33,25 +33,45 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Taxonomy page
+    const taxonomyList = document.querySelectorAll('.vg-taxonomy-list');
     const taxonomyRows = document.querySelectorAll('.vg-taxonomy-row');
+    const taxonomyPostsList = document.querySelectorAll('.vg-taxonomy-posts-list');
     let taxonomyRowSelected = false;
 
-    if (taxonomyRows) {
+    if (taxonomyList?.[0]) {
         taxonomyRows.forEach(row => {
             row.addEventListener('click', () => {
-                taxonomyRows.forEach(row => {
-                    if (!taxonomyRowSelected) {
-                        row.classList.remove('vg-taxonomy-row_selected')
-                    }
-
-                    row.classList.toggle('vg-taxonomy-row_open')
-                });
-
                 if (!taxonomyRowSelected) {
                     row.classList.add('vg-taxonomy-row_selected');
-                }
 
-                taxonomyRowSelected = !taxonomyRowSelected;
+                    taxonomyPostsList.forEach(postsList => {
+                        if (postsList.dataset.id === row.dataset.target) {
+                            postsList.classList.add('vg-taxonomy-posts-list_selected')
+                        } else {
+                            postsList.classList.remove('vg-taxonomy-posts-list_selected')
+                        }
+                    });
+
+                    taxonomyList[0].classList.add('vg-taxonomy-list_open');
+                    taxonomyRowSelected = true;
+                } else {
+                    if (row.classList.contains('vg-taxonomy-row_selected')) {
+                        row.classList.remove('vg-taxonomy-row_selected');
+                        taxonomyList[0].classList.remove('vg-taxonomy-list_open');
+                        taxonomyRowSelected = false;
+                    } else {
+                        taxonomyRows.forEach(row => row.classList.remove('vg-taxonomy-row_selected'));
+                        row.classList.add('vg-taxonomy-row_selected');
+
+                        taxonomyPostsList.forEach(postsList => {
+                            if (postsList.dataset.id === row.dataset.target) {
+                                postsList.classList.add('vg-taxonomy-posts-list_selected')
+                            } else {
+                                postsList.classList.remove('vg-taxonomy-posts-list_selected')
+                            }
+                        });
+                    }
+                }
             });
         });
     }

@@ -2,14 +2,12 @@
 title: "Шифрование устройств в Linux"
 summary: "Шифруем с использованием LUKS."
 categories: 
-  - Linux
-  - Шифрование
-  - LUKS
+  - Общая информация о Linux
+tags:
+  - linux
+  - crypt
 date: 2018-05-10T10:00:00-07:00
 draft: false
-tags:
-  - red
-  - green
 ---
 
 ## Device mapper

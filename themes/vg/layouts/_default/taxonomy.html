@@ -2,25 +2,28 @@
 <div class="vg-taxonomy">
   <div class="vg-taxonomy-list">
     {{ range .Pages }}
-    <a href="javascript:void(0);" class="vg-taxonomy-row">
+    <a href="javascript:void(0);" class="vg-taxonomy-row" data-target="{{ .RelPermalink }}">
       <div class="vg-taxonomy-row__title">{{ .LinkTitle }}</div>
-      <div class="vg-taxonomy-row__button">to the list of posts</div>
-    </a>
-    {{ end }}
-    {{ range .Pages }}
-    <a href="javascript:void(0);" class="vg-taxonomy-row">
-      <div class="vg-taxonomy-row__title">{{ .LinkTitle }}</div>
-      <div class="vg-taxonomy-row__button">to the list of posts</div>
+      <div class="vg-taxonomy-row__button">to posts</div>
     </a>
     {{ end }}
   </div>
 
-  <div class="vg-taxonomy-posts-list">
-    <div class="vg-taxonomy-posts-list__content">
+  <div class="vg-taxonomy-posts-list-wrapper">
+    {{ range .Pages }}
+    <div data-id="{{ .RelPermalink }}" class="vg-taxonomy-posts-list">
       {{ range .Pages }}
-      <a href="{{ .RelPermalink }}" class="vg-taxonomy-list__item">{{ .LinkTitle }}</a>
+      <a href="{{ .RelPermalink }}" class="vg-taxonomy-list__item">
+        {{ with .Resources.GetMatch "cover.png" }}
+        {{ $resized := .Fill "100x65" }}
+        <img src="{{ $resized.RelPermalink }}" alt="{{ .Title }}" class="vg-taxonomy-list__item-image" />
+        {{ end }}
+
+        {{ .LinkTitle }}
+      </a>
       {{ end }}
     </div>
+    {{ end }}
   </div>
 </div>
 {{ end }}

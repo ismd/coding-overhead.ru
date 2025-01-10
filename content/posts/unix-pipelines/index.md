@@ -2,14 +2,12 @@
 title: "Перенаправления Unix pipelines"
 summary: "Немного о конвейерах в Unix."
 categories: 
-  - Unix
-  - Bash
-  - CLI
+  - Общая информация о Linux
+tags:
+  - linux
+  - shell
 date: 2015-04-08T10:00:00-07:00
 draft: false
-tags:
-  - red
-  - green
 ---
 
 В любом приложении для Unix-подобных ОС всегда существуют 3 файловых дескриптора:
