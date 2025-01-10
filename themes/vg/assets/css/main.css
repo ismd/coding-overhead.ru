@@ -89,9 +89,10 @@ body.vg-sidebar-open {
   flex-direction: column;
   justify-content: space-between;
   width: 300px;
-  height: calc(100vh - 160px);
+  height: 100vh;
   padding: 80px 0;
   background: var(--main-color);
+  box-sizing: border-box;
   transition: right 0.4s;
   z-index: 1000;
 }
@@ -114,27 +115,32 @@ body.vg-sidebar-open {
   bottom: 0;
   left: 0;
   right: 0;
+  height: 80px;
+  padding: 0 24px;
+  background: var(--main-color);
+}
+
+.vg-social {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 80px;
-  padding: 0 24px;
+  height: 100%;
   box-sizing: border-box;
-  background: var(--main-color);
 }
 
-.vg-sidebar-footer__item {
+.vg-social__item {
+  display: flex;
   width: 32px;
   margin: 0 5px;
 }
 
-.vg-sidebar-footer__item svg {
+.vg-social__item svg {
   width: 100%;
   color: var(--background-color-light);
 }
 
-.vg-sidebar-footer__item:hover svg {
+.vg-social__item:hover svg {
   opacity: .7;
 }
 
@@ -219,9 +225,7 @@ body.vg-sidebar-open {
   .vg-sidebar.is-active {
     right: 0;
   }
-}
 
-@media (max-width: 870px) {
   .vg-sidebar__menu {
     display: block;
   }
@@ -317,7 +321,7 @@ body.vg-sidebar-open {
   position: relative;
   top: 25px;
   right: 15px;
-  opacity: 0;
+  display: none;
   padding: 20px;
   height: 70px;
   background: var(--main-color);
@@ -340,20 +344,23 @@ body.vg-sidebar-open {
   transform: rotate(90deg);
 }
 
+@media (max-width: 1200px) {
+  .vg-menu-nav {
+    font-size: 22px;
+  }
+}
+
 @media (max-width: 1024px) {
   .vg-header_home {
     padding-right: 0;
   }
 
   .vg-hamburger {
-    opacity: 1;
+    display: block;
   }
-}
 
-@media (max-width: 870px) {
   .vg-menu-nav {
     display: none;
-    line-height: 1.4;
   }
 }
 
@@ -365,12 +372,26 @@ body.vg-sidebar-open {
 /* END HEADER */
 
 /* FOOTER */
-footer {
+.vg-footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100px;
   text-align: center;
+}
+
+.vg-footer .vg-social {
+  display: none;
+  align-items: end;
+}
+
+.vg-footer_home .vg-social {
+  display: flex;
+}
+
+.vg-footer .vg-social__item svg {
+  color: var(--background-color-dark);
 }
 /* END FOOTER */
 
@@ -947,7 +968,7 @@ footer {
 .vg-taxonomy-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
   position: relative;
   width: 100%;
 }
@@ -958,7 +979,7 @@ footer {
   align-items: center;
   gap: 20px;
   width: 100%;
-  height: 85px;
+  height: 65px;
   background: var(--background-color-light);
   transition: width 0.4s;
   position: relative;

@@ -1,0 +1,37 @@
+<div class="vg-social">
+  {{ with resources.Get "icons/youtube.svg" }}
+  <a class="vg-social__item" href="https://youtube.com/" title="YouTube" target="_blank">
+    {{ .Content | safeHTML }}
+  </a>
+  {{ end }}
+
+  {{ with resources.Get "icons/github.svg" }}
+  <a class="vg-social__item" href="https://github.com/" title="GitHub" target="_blank">
+    {{ .Content | safeHTML }}
+  </a>
+  {{ end }}
+
+  {{ with resources.Get "icons/telegram.svg" }}
+  <a class="vg-social__item" href="https://telegram.org/" title="Telegram" target="_blank">
+    {{ .Content | safeHTML }}
+  </a>
+  {{ end }}
+
+  {{ with resources.Get "icons/twitch.svg" }}
+  <a class="vg-social__item" href="https://twitch.tv/" title="Twitch" target="_blank">
+    {{ .Content | safeHTML }}
+  </a>
+  {{ end }}
+
+  {{ with resources.Get "icons/discord.svg" }}
+  <a class="vg-social__item" href="https://discord.com/" title="Discord" target="_blank">
+    {{ .Content | safeHTML }}
+  </a>
+  {{ end }}
+
+  {{ with resources.Get "icons/rss.svg" }}
+  <a class="vg-social__item" href="{{ "rss.xml" | relURL }}" title="RSS" target="_blank">
+    {{ .Content | safeHTML }}
+  </a>
+  {{ end }}
+</div>
