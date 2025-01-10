@@ -1,7 +1,7 @@
 ---
 title: "Перенаправления Unix pipelines"
 summary: "Немного о конвейерах в Unix."
-categories: 
+categories:
   - Общая информация о Linux
 tags:
   - linux

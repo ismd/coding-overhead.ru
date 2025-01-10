@@ -73,7 +73,9 @@ body.vg-sidebar-open {
 
 .vg-main {
   display: flex;
-  min-height: calc(100vh - 200px)
+  min-height: calc(100vh - 200px);
+  padding-bottom: 10px;
+  box-sizing: border-box;
 }
 
 .vg-main-content {
@@ -94,6 +96,7 @@ body.vg-sidebar-open {
   background: var(--main-color);
   box-sizing: border-box;
   transition: right 0.4s;
+  overflow-y: auto;
   z-index: 1000;
 }
 
@@ -192,7 +195,8 @@ body.vg-sidebar-open {
   padding: 0 24px;
 }
 
-.vg-sidebar-tags__tag {
+.vg-sidebar-tags__tag,
+.vg-sidebar-tags__tag:visited {
   font-family: var(--secondary-font);
   white-space: nowrap;
   background: var(--background-color-light);

@@ -14,9 +14,12 @@
     {{ end }}
 
     <div class="vg-post__summary">
+      {{ if .Params.categories }}
+      {{ $category := index .Params.categories 0 }}
       <div class="vg-post__category">
-        <a href="javascript:void(0);">Категория</a>
+        <a href="javascript:void(0);">{{ $category }}</a>
       </div>
+      {{ end }}
 
       <div class="vg-post__title">
         <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
