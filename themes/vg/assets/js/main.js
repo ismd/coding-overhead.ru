@@ -31,4 +31,28 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     }
+
+    // Taxonomy page
+    const taxonomyRows = document.querySelectorAll('.vg-taxonomy-row');
+    let taxonomyRowSelected = false;
+
+    if (taxonomyRows) {
+        taxonomyRows.forEach(row => {
+            row.addEventListener('click', () => {
+                taxonomyRows.forEach(row => {
+                    if (!taxonomyRowSelected) {
+                        row.classList.remove('vg-taxonomy-row_selected')
+                    }
+
+                    row.classList.toggle('vg-taxonomy-row_open')
+                });
+
+                if (!taxonomyRowSelected) {
+                    row.classList.add('vg-taxonomy-row_selected');
+                }
+
+                taxonomyRowSelected = !taxonomyRowSelected;
+            });
+        });
+    }
 });

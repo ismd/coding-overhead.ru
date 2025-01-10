@@ -1,6 +1,10 @@
 ---
 title: "Перенаправления Unix pipelines"
 summary: "Немного о конвейерах в Unix."
+categories: 
+  - Unix
+  - Bash
+  - CLI
 date: 2015-04-08T10:00:00-07:00
 draft: false
 tags:

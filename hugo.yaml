@@ -10,13 +10,13 @@ menus:
       pageRef: /
       weight: 10
     - name: Посты
-      pageRef: /posts/
+      pageRef: /posts
       weight: 20
     - name: Категории
-      pageRef: /categories/
+      pageRef: /categories
       weight: 30
     - name: О блоге
-      pageRef: /about/
+      pageRef: /about
       weight: 40
 
 markup:

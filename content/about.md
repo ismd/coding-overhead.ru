@@ -1,5 +1,5 @@
 ---
-title: Обо мне
+title: О блоге
 date: 2025-01-08
 layout: about
 params:

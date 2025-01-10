@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="vg-taxonomy">
+  <div class="vg-taxonomy-list">
+    {{ range .Pages }}
+    <a href="javascript:void(0);" class="vg-taxonomy-row">
+      <div class="vg-taxonomy-row__title">{{ .LinkTitle }}</div>
+      <div class="vg-taxonomy-row__button">to the list of posts</div>
+    </a>
+    {{ end }}
+    {{ range .Pages }}
+    <a href="javascript:void(0);" class="vg-taxonomy-row">
+      <div class="vg-taxonomy-row__title">{{ .LinkTitle }}</div>
+      <div class="vg-taxonomy-row__button">to the list of posts</div>
+    </a>
+    {{ end }}
+  </div>
+
+  <div class="vg-taxonomy-posts-list">
+    <div class="vg-taxonomy-posts-list__content">
+      {{ range .Pages }}
+      <a href="{{ .RelPermalink }}" class="vg-taxonomy-list__item">{{ .LinkTitle }}</a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

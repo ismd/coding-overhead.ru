@@ -61,6 +61,7 @@ body.vg-sidebar-open {
 }
 
 .vg-page {
+  display: flex;
   max-width: 1440px;
   width: 100%;
   background: var(--background-color-light);
@@ -81,14 +82,14 @@ body.vg-sidebar-open {
 }
 
 .vg-sidebar {
-  position: fixed;
+  position: sticky;
   top: 0;
   right: 0;
-  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 300px;
+  height: calc(100vh - 160px);
   padding: 80px 0;
   background: var(--main-color);
   transition: right 0.4s;
@@ -96,7 +97,7 @@ body.vg-sidebar-open {
 }
 
 .vg-sidebar_home {
-  right: -300px;
+  display: none;
 }
 
 .vg-sidebar-main {
@@ -210,11 +211,19 @@ body.vg-sidebar-open {
   }
 
   .vg-sidebar {
+    display: flex;
+    position: fixed;
     right: -300px;
   }
 
   .vg-sidebar.is-active {
     right: 0;
+  }
+}
+
+@media (max-width: 870px) {
+  .vg-sidebar__menu {
+    display: block;
   }
 }
 
@@ -226,15 +235,6 @@ body.vg-sidebar-open {
   .vg-sidebar {
     width: 100%;
     right: -100%;
-  }
-
-  .vg-sidebar.is-active {
-    width: 100%;
-    right: 0;
-  }
-
-  .vg-sidebar__menu {
-    display: block;
   }
 }
 
@@ -936,4 +936,91 @@ footer {
   .vg-about-extended-info__column .vg-about-skills {
     padding-top: 0;
   }
+}
 /* END ABOUT */
+
+/* TAXONOMY */
+.vg-taxonomy {
+  display: flex;
+}
+
+.vg-taxonomy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.vg-taxonomy-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 85px;
+  background: var(--background-color-light);
+  transition: width 0.4s;
+  position: relative;
+  z-index: 1;
+}
+
+.vg-taxonomy-row:hover {
+  text-decoration: none;
+}
+
+.vg-taxonomy-row_open {
+  width: 60%;
+}
+
+.vg-taxonomy-row_selected + .vg-taxonomy-list {
+  display: flex;
+}
+
+.vg-taxonomy-row__title {
+  font-size: 24px;
+  color: var(--main-color);
+  letter-spacing: 1.2px;
+}
+
+.vg-taxonomy-row__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 30px;
+  background: var(--main-color);
+  color: var(--background-color-light);
+  font-family: var(--secondary-font);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.vg-taxonomy-posts-list {
+  display: none;
+  width: 40%;
+  position: relative;
+  right: -100%;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+
+.vg-taxonomy-posts-list__content {
+  position: sticky;
+  top: 15px;
+}
+
+.vg-taxonomy-posts-list .vg-taxonomy-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  height: 85px;
+  font-size: 24px;
+  letter-spacing: 1.2px;
+  color: var(--main-color);
+}
+/* END TAXONOMY */
