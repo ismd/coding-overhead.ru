@@ -87,11 +87,11 @@ body.vg-sidebar-open {
   position: sticky;
   top: 0;
   right: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 300px;
-  height: 100vh;
   padding: 80px 0;
   background: var(--main-color);
   box-sizing: border-box;
@@ -107,10 +107,10 @@ body.vg-sidebar-open {
 .vg-sidebar-main {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
-  height: 100%;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .vg-sidebar-footer {
@@ -118,7 +118,11 @@ body.vg-sidebar-open {
   bottom: 0;
   left: 0;
   right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 80px;
+  min-height: 80px;
   padding: 0 24px;
   background: var(--main-color);
 }
@@ -186,7 +190,7 @@ body.vg-sidebar-open {
 .vg-sidebar__menu .vg-menu-nav__item {
   margin: 4px 0;
   color: var(--background-color-light);
-  font-size: 28px;
+  font-size: 26px;
 }
 
 .vg-sidebar-tags {
@@ -243,6 +247,17 @@ body.vg-sidebar-open {
   .vg-sidebar {
     width: 100%;
     right: -100%;
+    overflow-y: auto;
+    padding-bottom: 0;
+  }
+
+  .vg-sidebar-main {
+    flex: 1;
+    overflow-y: visible;
+  }
+
+  .vg-sidebar-footer {
+    position: static;
   }
 }
 
@@ -273,12 +288,6 @@ body.vg-sidebar-open {
   }
 }
 
-@media (pointer: coarse) {
-  .vg-sidebar-tags {
-    display: none;
-  }
-}
-
 /* HEADER */
 .vg-header {
   display: flex;
@@ -304,17 +313,26 @@ body.vg-sidebar-open {
 
 .vg-menu-nav {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  padding-top: 20px;
+  padding: 20px 50px 0;
   flex: 1;
   font-size: 24px;
 }
 
 .vg-menu-nav__item {
   margin: 0 15px;
+  text-align: center;
   white-space: nowrap;
   color: var(--main-font-color);
+}
+
+.vg-menu-nav__item:first-child {
+  margin-left: 0;
+}
+
+.vg-menu-nav__item:last-child {
+  margin-right: 0;
 }
 
 .vg-menu-nav__item_active {
@@ -348,9 +366,26 @@ body.vg-sidebar-open {
   transform: rotate(90deg);
 }
 
+@media (max-width: 1300px) {
+  .vg-menu-nav {
+    margin: 0;
+    justify-content: space-between;
+  }
+
+  .vg-menu-nav__item {
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 1200px) {
   .vg-menu-nav {
-    font-size: 22px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .vg-menu-nav {
+    font-size: 18px;
   }
 }
 
