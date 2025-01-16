@@ -1062,8 +1062,6 @@ body.vg-sidebar-open {
   font-weight: 700;
   letter-spacing: 1.2px;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .vg-taxonomy-row_selected {
