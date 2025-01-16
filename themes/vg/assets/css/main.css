@@ -98,6 +98,7 @@ body.vg-sidebar-open {
   transition: right 0.4s;
   overflow-y: auto;
   z-index: 1000;
+  line-height: 1.4;
 }
 
 .vg-sidebar_home {
