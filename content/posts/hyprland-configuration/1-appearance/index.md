@@ -36,12 +36,20 @@ env = GTK_THEME,Fluent-Light
 
 ## Qt
 
-### FIXME Kvantum
-
-Для настройки темы Qt использовал переменную окружения ~QT_STYLE_OVERRIDE~. Для этого добавим в файл `~/.profile` следующую строку:
+Для настройки темы Qt использовал переменную окружения `QT_QPA_PLATFORMTHEME`. Для этого добавил в файл `~/.config/hypr/hyprland.conf`:
 
 ```
-export QT_STYLE_OVERRIDE=gtk
+env = QT_QPA_PLATFORMTHEME,gtk3
+```
+
+### Дополнительно
+
+Следуя рекомендациям из [официальной документации Hyprland](https://wiki.hyprland.org/Configuring/Environment-variables/) также добавил переменные окружения для Qt:
+
+```
+env = QT_AUTO_SCREEN_SCALE_FACTOR,1
+env = QT_QPA_PLATFORM,wayland;xcb
+env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
 ```
 
 # Курсор
