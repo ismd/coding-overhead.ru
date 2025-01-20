@@ -81,7 +81,13 @@ $ gsettings set org.gnome.desktop.interface cursor-theme 'BreezeX-Dark'
 
 Я&nbsp;использую EndeavourOS, поэтому иконки Qogir уже были установлены вместе с&nbsp;пакетом `endeavouros/eos-qogir-icons`. В&nbsp;Arch Linux&nbsp;же пакет называется `qogir-icon-theme`.
 
-Указал иконки используя `dconf-editor` в&nbsp;разделе *org &gt; gnome &gt; desktop &gt; interface &gt; icon-theme*. Значение поставил `Qogir`. В&nbsp;[документации](https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications#Using_a_GTK_icon_theme_in_Qt_applications) сказано, что установка через `dconf-editor` указывает иконки как для GTK, так и&nbsp;для&nbsp;Qt (так как QT_QPA_PLATFORMTHEME=gtk3).
+Указал иконки через `gsettings`:
+
+```console
+$ gsettings set org.gnome.desktop.interface icon-theme 'Qogir'
+```
+
+Благодаря QT_QPA_PLATFORMTHEME=gtk3 данная команда выставит иконки и&nbsp;для GTK, и&nbsp;для&nbsp;Qt.
 
 # Шрифты
 
