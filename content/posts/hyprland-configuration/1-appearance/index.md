@@ -54,11 +54,11 @@ env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
 
 # Курсор
 
-Hyprland поддерживает свой формат курсоров, который называется [hyprcursor](https://wiki.hyprland.org/Hypr-Ecosystem/hyprcursor/). Так как этот формат несовместим с&nbsp;форматом курсоров XCursor, понадобилось выбрать курсор, который есть и&nbsp;в&nbsp;XCursor-формате, и&nbsp;в&nbsp;новом hyprcursor. Это необходимо для того, чтобы иметь одинаковый курсор и&nbsp;в&nbsp;Wayland-приложениях, и&nbsp;в&nbsp;Xwayland.
+Hyprland поддерживает свой формат курсоров, который называется [hyprcursor](https://wiki.hyprland.org/Hypr-Ecosystem/hyprcursor/). Этот формат был создан вместо XCursor, чтобы решить недостатки последнего. Однако стоит учесть, что в&nbsp;Xwayland курсоры будут отображаться в&nbsp;формате XCursor. Поэтому нужно выбрать такую тему, для которой есть и&nbsp;XCursor-версия, и&nbsp;hyprcursor-версия.
 
-Курсоры в&nbsp;XCursor-формате можно найти без проблем, так как это формат по&nbsp;умолчанию. Например все темы&nbsp;на [gnome-look.org](https://www.gnome-look.org/) скачиваются именно в&nbsp;этом формате. Для hyprcursor искал тему в&nbsp;официальном Discord-канале `#hyprcursor-themes`. Изучив канал, остановился&nbsp;на [BreezeX_Cursor](https://github.com/ful1e5/BreezeX_Cursor).
+Курсоры в&nbsp;XCursor-формате можно найти без проблем, так как это формат по&nbsp;умолчанию. Например все темы&nbsp;на [gnome-look.org](https://www.gnome-look.org/) скачиваются именно в&nbsp;этом формате. Для hyprcursor&nbsp;же искал тему в&nbsp;официальном Discord-канале `#hyprcursor-themes`. Изучив канал, остановился&nbsp;на [BreezeX_Cursor](https://github.com/ful1e5/BreezeX_Cursor).
 
-Установить эту тему в&nbsp;XCursor-формате можно следующей командой `yay -S breezex-cursor-theme`. Для hyprcursor&nbsp;же скачать архив можно либо&nbsp;из [Discord-канала](https://discord.com/channels/961691461554950145/1216066899729977435/1255300607523422249), либо [с&nbsp;моего сайта](BreezeX-Dark-hyprcursor.zip). Распаковав архив в&nbsp;директорию `~/.local/share/icons`, получил установленную тему курсоров.
+Установить эту тему в&nbsp;XCursor-формате можно следующей командой `yay -S breezex-cursor-theme`. Для hyprcursor скачать архив можно либо&nbsp;из [Discord-канала](https://discord.com/channels/961691461554950145/1216066899729977435/1255300607523422249), либо [с&nbsp;моего сайта](BreezeX-Dark-hyprcursor.zip). Распаковав архив в&nbsp;директорию `~/.local/share/icons`, получил установленную тему курсоров.
 
 В&nbsp;файле `~/.config/hypr/hyprland.conf` добавил следующие переменные окружения:
 
@@ -77,7 +77,7 @@ $ gsettings set org.gnome.desktop.interface cursor-theme 'BreezeX-Dark'
 
 # Иконки
 
-Наборы иконок так&nbsp;же, как и&nbsp;остальное, искал&nbsp;на [gnome-look.org](https://www.gnome-look.org/). Выбирал между, пожалуй, самой популярной темой [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) и&nbsp;[Qogir](https://github.com/vinceliuice/Qogir-icon-theme). Остановился на&nbsp;второй, так как она мне понравилась больше. На&nbsp;мой взгляд, она больше подходит под выбранное оформление окон и&nbsp;виджетов.
+Наборы иконок так&nbsp;же, как и&nbsp;остальное, искал&nbsp;на [gnome-look.org](https://www.gnome-look.org/). Выбирал между, пожалуй, самой популярной темой [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) и&nbsp;[Qogir](https://github.com/vinceliuice/Qogir-icon-theme). Остановился на&nbsp;второй. На&nbsp;мой взгляд, она больше подходит под выбранное оформление окон и&nbsp;виджетов.
 
 Я&nbsp;использую EndeavourOS, поэтому иконки Qogir уже были установлены вместе с&nbsp;пакетом `endeavouros/eos-qogir-icons`. В&nbsp;Arch Linux&nbsp;же пакет называется `qogir-icon-theme`.
 
