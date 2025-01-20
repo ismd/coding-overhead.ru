@@ -25,6 +25,10 @@ params:
     twitch: "https://twitch.tv/"
     discord: "https://discord.com/"
 
+markup:
+  highlight:
+    style: friendly
+
 module:
   hugoVersion:
     extended: false

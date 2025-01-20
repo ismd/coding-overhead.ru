@@ -32,7 +32,7 @@ markup:
     renderer:
       unsafe: true
   highlight:
-    style: emacs
+    style: friendly
 
 deployment:
   targets:
