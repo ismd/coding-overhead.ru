@@ -54,11 +54,11 @@ env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
 
 # Курсор
 
-Hyprland поддерживает свой формат курсоров, который называется [hyprcursor](https://wiki.hyprland.org/Hypr-Ecosystem/hyprcursor/). Этот формат несовместим с&nbsp;форматом курсоров X11, поэтому, чтобы получить одинаковый курсор во&nbsp;всех приложениях, необходимо найти тему курсоров в&nbsp;X11-формате и&nbsp;отдельно в&nbsp;hyprcursor-формате. В&nbsp;документации по&nbsp;hyprcursor написано, что темы для курсоров в&nbsp;Hyprland пользователи скидывают в&nbsp;Discord в&nbsp;канал `#hyprcursor-themes`. Изучив канал, остановился&nbsp;на [BreezeX_Cursor](https://github.com/ful1e5/BreezeX_Cursor).
+Hyprland поддерживает свой формат курсоров, который называется [hyprcursor](https://wiki.hyprland.org/Hypr-Ecosystem/hyprcursor/). Так как этот формат несовместим с&nbsp;форматом курсоров XCursor, понадобилось выбрать курсор, который есть и&nbsp;в&nbsp;XCursor-формате, и&nbsp;в&nbsp;новом hyprcursor. Это необходимо для того, чтобы иметь одинаковый курсор и&nbsp;в&nbsp;Wayland-приложениях, и&nbsp;в&nbsp;Xwayland.
 
-Установить выбранную тему курсоров для X11 можно следующей командой `yay -S breezex-cursor-theme`.
+Курсоры в&nbsp;XCursor-формате можно найти без проблем, так как это формат по&nbsp;умолчанию. Например все темы&nbsp;на [gnome-look.org](https://www.gnome-look.org/) скачиваются именно в&nbsp;этом формате. Для hyprcursor искал тему в&nbsp;официальном Discord-канале `#hyprcursor-themes`. Изучив канал, остановился&nbsp;на [BreezeX_Cursor](https://github.com/ful1e5/BreezeX_Cursor).
 
-Для hyprcursor скачать файл с&nbsp;темой курсоров BreezeX-Dark можно&nbsp;по [ссылке](https://discord.com/channels/961691461554950145/1216066899729977435/1255300607523422249) из&nbsp;Discord&rsquo;а либо [с&nbsp;моего сайта](BreezeX-Dark-hyprcursor.zip). Распаковав архив в&nbsp;директорию `~/.local/share/icons`, получил установленную тему курсоров.
+Установить эту тему в&nbsp;XCursor-формате можно следующей командой `yay -S breezex-cursor-theme`. Для hyprcursor&nbsp;же скачать архив можно либо&nbsp;из [Discord-канала](https://discord.com/channels/961691461554950145/1216066899729977435/1255300607523422249), либо [с&nbsp;моего сайта](BreezeX-Dark-hyprcursor.zip). Распаковав архив в&nbsp;директорию `~/.local/share/icons`, получил установленную тему курсоров.
 
 В&nbsp;файле `~/.config/hypr/hyprland.conf` добавил следующие переменные окружения:
 
