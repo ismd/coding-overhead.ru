@@ -19,6 +19,14 @@ menus:
       pageRef: /about
       weight: 40
 
+params:
+  social:
+    youtube:
+    github: "https://github.com/ismd"
+    telegram:
+    twitch: "https://www.twitch.tv/codingoverhead"
+    discord:
+
 markup:
   goldmark:
     renderer:

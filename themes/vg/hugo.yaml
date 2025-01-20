@@ -17,6 +17,14 @@ menus:
       pageRef: /about
       weight: 40
 
+params:
+  social:
+    youtube: "https://youtube.com/"
+    github: "https://github.com/"
+    telegram: "https://t.me/"
+    twitch: "https://twitch.tv/"
+    discord: "https://discord.com/"
+
 module:
   hugoVersion:
     extended: false
