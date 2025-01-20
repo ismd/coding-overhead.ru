@@ -74,3 +74,31 @@ env = XCURSOR_THEME,BreezeX-Dark
 ```console
 $ gsettings set org.gnome.desktop.interface cursor-theme 'BreezeX-Dark'
 ```
+
+# Иконки
+
+Наборы иконок так же, как и остальное, искал на [gnome-look.org](https://www.gnome-look.org/). Выбирал между, пожалуй, самой популярной темой [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) и [Qogir](https://github.com/vinceliuice/Qogir-icon-theme). Остановился на второй, так как она мне понравилась больше. На мой взгляд, она больше подходит под выбранное оформление окон и виджетов.
+
+Я использую EndeavourOS, поэтому иконки Qogir уже были установлены вместе с пакетом `endeavouros/eos-qogir-icons`. В Arch Linux же пакет называется `qogir-icon-theme`.
+
+Указал иконки используя `dconf-editor` в разделе *org > gnome > desktop > interface > icon-theme*. Значение поставил `Qogir`. В [документации](https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications#Using_a_GTK_icon_theme_in_Qt_applications) сказано, что установка через `dconf-editor` указывает иконки как для GTK, так и для Qt (так как QT_QPA_PLATFORMTHEME=gtk3).
+
+# Шрифты
+
+В качестве шрифта выбрал Noto Sans Regular. Указать его можно через `nwg-look`, про который написал ниже.
+
+# nwg-look
+
+[nwg-look](https://github.com/nwg-piotr/nwg-look) &mdash; это утилита для настройки GTK. С помощью неё можно задать внешний вид, цвета, курсор, шрифты, а также темы иконок. `nwg-look` при открытии подставляет свои сохранённые значения, а не берёт их из конфига GTK. Это означает, что при сохранении настроек в `nwg-look` они перетрут всё, что мы настраивали до этого вручную. Поэтому я задал дополнительно все те настройки, которые указывал до этого, также и в `nwg-look`:
+
+```
+Widget theme: Fluent-Light
+Default font: Noto Sans Regular 11
+Icon theme: Qogir
+Mouse cursor: BreezeX-Dark
+Cursor size: 28
+```
+
+# Заключение
+
+В итоге я настроил тему оформления, курсор, иконки и шрифты. Всё это сделало интерфейс более приятным и удобным для меня. В целом этот пост можно рассматривать как инструкцию для настройки своего внешнего вида. Следуя по шагам из статьи можно получить красивое окружение. Возможно в будущем я что-то поменяю, поэтому даю ссылку на свои конфиги в [репозитории](https://github.com/ismd/dotfiles).
