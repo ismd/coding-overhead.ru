@@ -10,33 +10,33 @@ date: 2024-01-14T21:18:00
 draft: true
 ---
 
-Это первая статья из серии статей про конфигурацию Hyprland. В ней я расскажу, как настроил тему оформления, а именно внешний вид окон, виджетов, а также курсор и иконки.
+Это первая статья из&nbsp;серии статей про конфигурацию Hyprland. В&nbsp;ней я&nbsp;расскажу, как настроил тему оформления, а&nbsp;именно внешний вид окон, виджетов, а&nbsp;также курсор и&nbsp;иконки.
 
-Я предпочитаю светлые темы, поэтому выбирал только среди таких. Курсор выбирал, чтобы контрастировал с остальным интерфейсом, соответственно был тёмным. Иконки же выбирал на основе популярности и просто чтобы понравилось.
+Я&nbsp;предпочитаю светлые темы, поэтому выбирал только среди таких. Курсор выбирал, чтобы контрастировал с&nbsp;остальным интерфейсом, соответственно был тёмным. Иконки&nbsp;же выбирал на&nbsp;основе популярности и&nbsp;просто чтобы понравилось.
 
 Далее распишу подробнее про каждый элемент.
 
 # Внешний вид окон и виджетов
 
-Как следует из официальной вики, понадобилось отдельно настроить темы для GTK и Qt:
+Как следует из&nbsp;официальной вики, понадобилось отдельно настроить темы для GTK и&nbsp;Qt:
 
-> Since this is not a fully-fledged Desktop Environment, you will need to use tools such as lxappearance and nwg-look (recommended) for GTK, and qt5ct / qt6ct for their respective Qt versions. Some older applications may also require qt4ct.
+> Since this is&nbsp;not a&nbsp;fully-fledged Desktop Environment, you will need to&nbsp;use tools such as&nbsp;lxappearance and nwg-look (recommended) for GTK, and qt5ct&nbsp;/ qt6ct for their respective&nbsp;Qt versions. Some older applications may also require qt4ct.
 
 ## GTK
 
-Темы для GTK можно найти на [gnome-look.org](https://www.gnome-look.org/) в разделе "GTK3/4 Themes". Я остановился на теме [Fluent](https://github.com/vinceliuice/Fluent-gtk-theme). У неё есть большое количество стилей, включая светлый. Установить эту тему из AUR можно командой `yay -S fluent-gtk-theme`.
+Темы для GTK можно найти&nbsp;на [gnome-look.org](https://www.gnome-look.org/) в&nbsp;разделе &laquo;GTK3/4&nbsp;Themes&raquo;. Я&nbsp;остановился на&nbsp;теме [Fluent](https://github.com/vinceliuice/Fluent-gtk-theme). У&nbsp;неё есть большое количество стилей, включая светлый. Установить эту тему из&nbsp;AUR можно командой `yay -S fluent-gtk-theme`.
 
-Для того, чтобы указать в Hyprland тему GTK, я использовал переменную окружения `GTK_THEME` со значением `Fluent-Light`. Для этого необходимо добавить в файл `~/.config/hypr/hyprland.conf` следующую строку:
+Для того, чтобы указать в&nbsp;Hyprland тему GTK, я&nbsp;использовал переменную окружения `GTK_THEME` со&nbsp;значением `Fluent-Light`. Для этого необходимо добавить в&nbsp;файл `~/.config/hypr/hyprland.conf` следующую строку:
 
 ```
 env = GTK_THEME,Fluent-Light
 ```
 
-В целом на этом настройка GTK закончена. Для применения изменений нужно перезапустить окружение.
+В&nbsp;целом на&nbsp;этом настройка GTK закончена. Для применения изменений нужно перезапустить окружение.
 
 ## Qt
 
-Для настройки темы Qt использовал переменную окружения `QT_QPA_PLATFORMTHEME`. Для этого добавил в файл `~/.config/hypr/hyprland.conf`:
+Для настройки темы&nbsp;Qt использовал переменную окружения `QT_QPA_PLATFORMTHEME`. Для этого добавил в&nbsp;файл `~/.config/hypr/hyprland.conf`:
 
 ```
 env = QT_QPA_PLATFORMTHEME,gtk3
@@ -44,7 +44,7 @@ env = QT_QPA_PLATFORMTHEME,gtk3
 
 ### Дополнительно
 
-Следуя рекомендациям из [официальной документации Hyprland](https://wiki.hyprland.org/Configuring/Environment-variables/) также добавил переменные окружения для Qt:
+Следуя рекомендациям&nbsp;из [официальной документации Hyprland](https://wiki.hyprland.org/Configuring/Environment-variables/) также добавил переменные окружения для&nbsp;Qt:
 
 ```
 env = QT_AUTO_SCREEN_SCALE_FACTOR,1
@@ -54,13 +54,13 @@ env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
 
 # Курсор
 
-Hyprland поддерживает свой формат курсоров, который называется [hyprcursor](https://wiki.hyprland.org/Hypr-Ecosystem/hyprcursor/). Этот формат несовместим с форматом курсоров X11, поэтому, чтобы получить одинаковый курсор во всех приложениях, необходимо найти тему курсоров в X11-формате и отдельно в hyprcursor-формате. В документации по hyprcursor написано, что темы для курсоров в Hyprland пользователи скидывают в Discord в канал `#hyprcursor-themes`. Изучив канал, остановился на [BreezeX_Cursor](https://github.com/ful1e5/BreezeX_Cursor).
+Hyprland поддерживает свой формат курсоров, который называется [hyprcursor](https://wiki.hyprland.org/Hypr-Ecosystem/hyprcursor/). Этот формат несовместим с&nbsp;форматом курсоров X11, поэтому, чтобы получить одинаковый курсор во&nbsp;всех приложениях, необходимо найти тему курсоров в&nbsp;X11-формате и&nbsp;отдельно в&nbsp;hyprcursor-формате. В&nbsp;документации по&nbsp;hyprcursor написано, что темы для курсоров в&nbsp;Hyprland пользователи скидывают в&nbsp;Discord в&nbsp;канал `#hyprcursor-themes`. Изучив канал, остановился&nbsp;на [BreezeX_Cursor](https://github.com/ful1e5/BreezeX_Cursor).
 
 Установить выбранную тему курсоров для X11 можно следующей командой `yay -S breezex-cursor-theme`.
 
-Для hyprcursor скачать файл с темой курсоров BreezeX-Dark можно по [ссылке](https://discord.com/channels/961691461554950145/1216066899729977435/1255300607523422249) из Discord'а либо [с моего сайта](BreezeX-Dark-hyprcursor.zip). Распаковав архив в директорию `~/.local/share/icons`, получил установленную тему курсоров.
+Для hyprcursor скачать файл с&nbsp;темой курсоров BreezeX-Dark можно&nbsp;по [ссылке](https://discord.com/channels/961691461554950145/1216066899729977435/1255300607523422249) из&nbsp;Discord&rsquo;а либо [с&nbsp;моего сайта](BreezeX-Dark-hyprcursor.zip). Распаковав архив в&nbsp;директорию `~/.local/share/icons`, получил установленную тему курсоров.
 
-В файле `~/.config/hypr/hyprland.conf` добавил следующие переменные окружения:
+В&nbsp;файле `~/.config/hypr/hyprland.conf` добавил следующие переменные окружения:
 
 ```
 env = HYPRCURSOR_SIZE,28
@@ -69,7 +69,7 @@ env = XCURSOR_SIZE,28
 env = XCURSOR_THEME,BreezeX-Dark
 ```
 
-А также выполнил команду из документации:
+А&nbsp;также выполнил команду из&nbsp;документации:
 
 ```console
 $ gsettings set org.gnome.desktop.interface cursor-theme 'BreezeX-Dark'
@@ -77,19 +77,19 @@ $ gsettings set org.gnome.desktop.interface cursor-theme 'BreezeX-Dark'
 
 # Иконки
 
-Наборы иконок так же, как и остальное, искал на [gnome-look.org](https://www.gnome-look.org/). Выбирал между, пожалуй, самой популярной темой [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) и [Qogir](https://github.com/vinceliuice/Qogir-icon-theme). Остановился на второй, так как она мне понравилась больше. На мой взгляд, она больше подходит под выбранное оформление окон и виджетов.
+Наборы иконок так&nbsp;же, как и&nbsp;остальное, искал&nbsp;на [gnome-look.org](https://www.gnome-look.org/). Выбирал между, пожалуй, самой популярной темой [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) и&nbsp;[Qogir](https://github.com/vinceliuice/Qogir-icon-theme). Остановился на&nbsp;второй, так как она мне понравилась больше. На&nbsp;мой взгляд, она больше подходит под выбранное оформление окон и&nbsp;виджетов.
 
-Я использую EndeavourOS, поэтому иконки Qogir уже были установлены вместе с пакетом `endeavouros/eos-qogir-icons`. В Arch Linux же пакет называется `qogir-icon-theme`.
+Я&nbsp;использую EndeavourOS, поэтому иконки Qogir уже были установлены вместе с&nbsp;пакетом `endeavouros/eos-qogir-icons`. В&nbsp;Arch Linux&nbsp;же пакет называется `qogir-icon-theme`.
 
-Указал иконки используя `dconf-editor` в разделе *org > gnome > desktop > interface > icon-theme*. Значение поставил `Qogir`. В [документации](https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications#Using_a_GTK_icon_theme_in_Qt_applications) сказано, что установка через `dconf-editor` указывает иконки как для GTK, так и для Qt (так как QT_QPA_PLATFORMTHEME=gtk3).
+Указал иконки используя `dconf-editor` в&nbsp;разделе *org &gt; gnome &gt; desktop &gt; interface &gt; icon-theme*. Значение поставил `Qogir`. В&nbsp;[документации](https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications#Using_a_GTK_icon_theme_in_Qt_applications) сказано, что установка через `dconf-editor` указывает иконки как для GTK, так и&nbsp;для&nbsp;Qt (так как QT_QPA_PLATFORMTHEME=gtk3).
 
 # Шрифты
 
-В качестве шрифта выбрал Noto Sans Regular. Указать его можно через `nwg-look`, про который написал ниже.
+В&nbsp;качестве шрифта выбрал Noto Sans Regular. Указать его можно через `nwg-look`, про который написал ниже.
 
 # nwg-look
 
-[nwg-look](https://github.com/nwg-piotr/nwg-look) &mdash; это утилита для настройки GTK. С помощью неё можно задать внешний вид, цвета, курсор, шрифты, а также темы иконок. `nwg-look` при открытии подставляет свои сохранённые значения, а не берёт их из конфига GTK. Это означает, что при сохранении настроек в `nwg-look` они перетрут всё, что мы настраивали до этого вручную. Поэтому я задал дополнительно все те настройки, которые указывал до этого, также и в `nwg-look`:
+[nwg-look](https://github.com/nwg-piotr/nwg-look)&nbsp;&mdash; это утилита для настройки GTK. С&nbsp;помощью неё можно задать внешний вид, цвета, курсор, шрифты, а&nbsp;также темы иконок. `nwg-look` при открытии подставляет свои сохранённые значения, а&nbsp;не&nbsp;берёт их&nbsp;из&nbsp;конфига GTK. Это означает, что при сохранении настроек в `nwg-look` они перетрут всё, что мы&nbsp;настраивали до&nbsp;этого вручную. Поэтому я&nbsp;задал дополнительно все те&nbsp;настройки, которые указывал до&nbsp;этого, также и&nbsp;в `nwg-look`:
 
 ```
 Widget theme: Fluent-Light
@@ -101,4 +101,4 @@ Cursor size: 28
 
 # Заключение
 
-В итоге я настроил тему оформления, курсор, иконки и шрифты. Всё это сделало интерфейс более приятным и удобным для меня. В целом этот пост можно рассматривать как инструкцию для настройки своего внешнего вида. Следуя по шагам из статьи можно получить красивое окружение. Возможно в будущем я что-то поменяю, поэтому даю ссылку на свои конфиги в [репозитории](https://github.com/ismd/dotfiles).
+В&nbsp;итоге я&nbsp;настроил тему оформления, курсор, иконки и&nbsp;шрифты. Всё это сделало интерфейс более приятным и&nbsp;удобным для меня. В&nbsp;целом этот пост можно рассматривать как инструкцию для настройки своего внешнего вида. Следуя по&nbsp;шагам из&nbsp;статьи можно получить красивое окружение. Возможно в&nbsp;будущем я&nbsp;что-то поменяю, поэтому даю ссылку на&nbsp;свои конфиги&nbsp;в [репозитории](https://github.com/ismd/dotfiles).
