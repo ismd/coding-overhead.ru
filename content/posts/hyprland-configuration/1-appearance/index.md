@@ -16,7 +16,7 @@ draft: true
 
 Далее распишу подробнее про каждый элемент.
 
-# Внешний вид окон и виджетов
+# Внешний вид окон и&nbsp;виджетов
 
 Как следует из&nbsp;официальной вики, понадобилось отдельно настроить темы для GTK и&nbsp;Qt:
 
@@ -36,7 +36,7 @@ env = GTK_THEME,Fluent-Light
 
 ## Qt
 
-Для настройки темы&nbsp;Qt использовал переменную окружения `QT_QPA_PLATFORMTHEME`. Для этого добавил в&nbsp;файл `~/.config/hypr/hyprland.conf`:
+Внешний вид Qt-приложений можно настроить через переменную окружения `QT_QPA_PLATFORMTHEME`. В&nbsp;качестве значения можно передать `gtk3`, чтобы использовать тему GTK. Я&nbsp;решил так и&nbsp;поступить и&nbsp;добавил в&nbsp;файл `~/.config/hypr/hyprland.conf`:
 
 ```
 env = QT_QPA_PLATFORMTHEME,gtk3
@@ -44,7 +44,7 @@ env = QT_QPA_PLATFORMTHEME,gtk3
 
 ### Дополнительно
 
-Следуя рекомендациям&nbsp;из [официальной документации Hyprland](https://wiki.hyprland.org/Configuring/Environment-variables/) также добавил переменные окружения для&nbsp;Qt:
+Следуя рекомендациям&nbsp;из [официальной документации Hyprland](https://wiki.hyprland.org/Configuring/Environment-variables/) также добавил переменные окружения для Qt:
 
 ```
 env = QT_AUTO_SCREEN_SCALE_FACTOR,1
@@ -87,7 +87,7 @@ $ gsettings set org.gnome.desktop.interface cursor-theme 'BreezeX-Dark'
 $ gsettings set org.gnome.desktop.interface icon-theme 'Qogir'
 ```
 
-Благодаря QT_QPA_PLATFORMTHEME=gtk3 данная команда выставит иконки и&nbsp;для GTK, и&nbsp;для&nbsp;Qt.
+Благодаря `QT_QPA_PLATFORMTHEME=gtk3`, которую я&nbsp;добавил в&nbsp;разделе&nbsp;Qt, для Qt-приложений также используется тема иконок Qogir.
 
 # Шрифты
 
@@ -95,7 +95,9 @@ $ gsettings set org.gnome.desktop.interface icon-theme 'Qogir'
 
 # nwg-look
 
-[nwg-look](https://github.com/nwg-piotr/nwg-look)&nbsp;&mdash; это утилита для настройки GTK. С&nbsp;помощью неё можно задать внешний вид, цвета, курсор, шрифты, а&nbsp;также темы иконок. `nwg-look` при открытии подставляет свои сохранённые значения, а&nbsp;не&nbsp;берёт их&nbsp;из&nbsp;конфига GTK. Это означает, что при сохранении настроек в `nwg-look` они перетрут всё, что мы&nbsp;настраивали до&nbsp;этого вручную. Поэтому я&nbsp;задал дополнительно все те&nbsp;настройки, которые указывал до&nbsp;этого, также и&nbsp;в `nwg-look`:
+[nwg-look](https://github.com/nwg-piotr/nwg-look)&nbsp;&mdash; это утилита для настройки GTK. С&nbsp;помощью неё можно задать внешний вид, цвета, курсор, шрифты, а&nbsp;также темы иконок. Напомню, что&nbsp;Qt настроил так, чтобы использовалась тема GTK.
+
+`nwg-look` при открытии подставляет свои сохранённые значения, а&nbsp;не&nbsp;берёт их&nbsp;из&nbsp;конфига GTK. Это означает, что при сохранении настроек в `nwg-look` они перетрут всё, что мы&nbsp;настраивали до&nbsp;этого вручную. Поэтому я&nbsp;задал дополнительно все те&nbsp;настройки, которые указывал до&nbsp;этого, также и&nbsp;в `nwg-look`:
 
 ```
 Widget theme: Fluent-Light
