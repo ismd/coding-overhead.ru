@@ -27,19 +27,19 @@ p {
 code {
   background: rgba(0, 0, 0, .05);
   padding: 0 4px;
-  white-space: nowrap;
+  white-space: pre;
 }
 
 pre {
   background: rgba(var(--main-color-rgb), .1);
   padding: 8px 14px;
-  white-space: pre-wrap;
+  overflow-x: auto;
+  overflow-wrap: normal;
 }
 
 pre code {
   background: none;
   padding: 0;
-  white-space: pre-wrap;
 }
 
 h1, h2, h3 {
@@ -102,7 +102,9 @@ body.vg-sidebar-open {
 
 .vg-main-content {
   flex: 1;
+  width: 100%;
   padding: 0 50px;
+  box-sizing: border-box;
 }
 
 .vg-sidebar {
@@ -576,6 +578,7 @@ body.vg-sidebar-open {
 
   .vg-post__image {
     width: 100%;
+    padding-right: 0;
   }
 
   .vg-post__summary {
