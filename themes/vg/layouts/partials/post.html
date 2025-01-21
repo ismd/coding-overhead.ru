@@ -2,10 +2,10 @@
 {{- $full := .full }}
 
 {{ with $post }}
-<div class="vg-post">
+<div class="vg-post{{ if $full }} vg-post_full{{ end }}">
   <div class="vg-post__content">
     {{ with $post.Resources.GetMatch "cover.png" }}
-    {{ $resized := .Fill "200x130" }}
+    {{ $resized := .Fill "800x450" }}
     <div class="vg-post__image">
       <a href="{{ $post.RelPermalink }}">
         <img src="{{ $resized.RelPermalink }}" alt="{{ .Title }}">

@@ -483,6 +483,10 @@ body.vg-sidebar-open {
   padding-right: 30px;
 }
 
+.vg-post_full .vg-post__image {
+  width: 400px;
+}
+
 .vg-post__image img {
   width: 100%;
 }
@@ -494,9 +498,8 @@ body.vg-sidebar-open {
 .vg-post__category {
   display: flex;
   align-items: center;
-  height: 40px;
   background: var(--background-color-dark);
-  padding: 0 6px;
+  padding: 6px;
   margin-bottom: 18px;
 }
 
@@ -505,6 +508,7 @@ body.vg-sidebar-open {
   font-family: var(--secondary-font);
   font-weight: 700;
   color: var(--background-color-light);
+  line-height: 1.2;
 }
 
 .vg-post__title {
@@ -576,7 +580,8 @@ body.vg-sidebar-open {
     flex-direction: column;
   }
 
-  .vg-post__image {
+  .vg-post__image,
+  .vg-post_full .vg-post__image {
     width: 100%;
     padding-right: 0;
   }
