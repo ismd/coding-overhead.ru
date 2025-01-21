@@ -32,46 +32,78 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Taxonomy page
-    const taxonomyList = document.querySelectorAll('.vg-taxonomy-list');
-    const taxonomyRows = document.querySelectorAll('.vg-taxonomy-row');
-    const taxonomyPostsList = document.querySelectorAll('.vg-taxonomy-posts-list');
-    let taxonomyRowSelected = false;
+    // Categories list page
+    const categoriesList = document.querySelectorAll('.vg-categories-list');
+    const categoriesRows = document.querySelectorAll('.vg-categories-row');
+    const categoriesPostsList = document.querySelectorAll('.vg-categories-posts-list');
+    let categoriesRowSelected = false;
 
-    if (taxonomyList?.[0]) {
-        taxonomyRows.forEach(row => {
+    if (categoriesList?.[0]) {
+        categoriesRows.forEach(row => {
             row.addEventListener('click', () => {
-                if (!taxonomyRowSelected) {
-                    row.classList.add('vg-taxonomy-row_selected');
+                if (!categoriesRowSelected) {
+                    row.classList.add('vg-categories-row_selected');
 
-                    taxonomyPostsList.forEach(postsList => {
+                    categoriesPostsList.forEach(postsList => {
                         if (postsList.dataset.id === row.dataset.target) {
-                            postsList.classList.add('vg-taxonomy-posts-list_selected')
+                            postsList.classList.add('vg-categories-posts-list_selected')
                         } else {
-                            postsList.classList.remove('vg-taxonomy-posts-list_selected')
+                            postsList.classList.remove('vg-categories-posts-list_selected')
                         }
                     });
 
-                    taxonomyList[0].classList.add('vg-taxonomy-list_open');
-                    taxonomyRowSelected = true;
+                    categoriesList[0].classList.add('vg-categories-list_open');
+                    categoriesRowSelected = true;
                 } else {
-                    if (row.classList.contains('vg-taxonomy-row_selected')) {
-                        row.classList.remove('vg-taxonomy-row_selected');
-                        taxonomyList[0].classList.remove('vg-taxonomy-list_open');
-                        taxonomyRowSelected = false;
+                    if (row.classList.contains('vg-categories-row_selected')) {
+                        row.classList.remove('vg-categories-row_selected');
+                        categoriesList[0].classList.remove('vg-categories-list_open');
+                        categoriesRowSelected = false;
                     } else {
-                        taxonomyRows.forEach(row => row.classList.remove('vg-taxonomy-row_selected'));
-                        row.classList.add('vg-taxonomy-row_selected');
+                        categoriesRows.forEach(row => row.classList.remove('vg-categories-row_selected'));
+                        row.classList.add('vg-categories-row_selected');
 
-                        taxonomyPostsList.forEach(postsList => {
+                        categoriesPostsList.forEach(postsList => {
                             if (postsList.dataset.id === row.dataset.target) {
-                                postsList.classList.add('vg-taxonomy-posts-list_selected')
+                                postsList.classList.add('vg-categories-posts-list_selected')
                             } else {
-                                postsList.classList.remove('vg-taxonomy-posts-list_selected')
+                                postsList.classList.remove('vg-categories-posts-list_selected')
                             }
                         });
                     }
                 }
+            });
+        });
+    }
+
+    // Tags list page
+    const selectedTags = new Set();
+    const tagsList = document.querySelectorAll('.vg-tags-list-item');
+    const postsList = document.querySelectorAll('.vg-post');
+
+    if (tagsList) {
+        tagsList.forEach(tag => {
+            tag.addEventListener('click', () => {
+                tag.classList.toggle('vg-tags-list-item_active');
+
+                const currentTag = tag.getAttribute('data-tag');
+                if (selectedTags.has(currentTag)) {
+                    selectedTags.delete(currentTag);
+                } else {
+                    selectedTags.add(currentTag);
+                }
+
+                if (selectedTags.size === 0) {
+                    postsList.forEach(post => post.classList.remove('vg-post_visible'));
+                    return;
+                }
+
+                postsList.forEach(post => {
+                    const tags = post.getAttribute('data-tags').split(' ');
+                    const visible = Array.from(selectedTags).every(tag => tags.includes(tag));
+
+                    post.classList.toggle('vg-post_visible', visible);
+                });
             });
         });
     }

@@ -66,7 +66,6 @@ body {
   font-size: 16px;
   font-style: normal;
   color: var(--main-font-color);
-  line-height: 1.6;
 }
 
 body.vg-sidebar-open {
@@ -467,6 +466,14 @@ body.vg-sidebar-open {
 .vg-posts-list .vg-post {
   padding-bottom: 40px;
 }
+
+.vg-posts-list_toggleable .vg-post {
+  display: none;
+}
+
+.vg-posts-list_toggleable .vg-post_visible {
+  display: block;
+}
 /* END POSTS LIST */
 
 /* POST */
@@ -525,6 +532,7 @@ body.vg-sidebar-open {
 
 .vg-post__description {
   margin: 16px 0;
+  line-height: 1.6;
 }
 
 .vg-post-tags {
@@ -1030,14 +1038,14 @@ body.vg-sidebar-open {
 }
 /* END ABOUT */
 
-/* TAXONOMY */
-.vg-taxonomy {
+/* CATEGORIES */
+.vg-categories {
   display: flex;
   padding-top: 50px;
   position: relative;
 }
 
-.vg-taxonomy-list {
+.vg-categories-list {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -1049,11 +1057,11 @@ body.vg-sidebar-open {
   z-index: 1;
 }
 
-.vg-taxonomy-list_open {
+.vg-categories-list_open {
   width: 60%;
 }
 
-.vg-taxonomy-row {
+.vg-categories-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1064,23 +1072,24 @@ body.vg-sidebar-open {
   z-index: 1;
 }
 
-.vg-taxonomy-row:hover {
+.vg-categories-row:hover {
   font-weight: 700;
   text-decoration: none;
 }
 
-.vg-taxonomy-row:hover .vg-taxonomy-row__button {
+.vg-categories-row:hover .vg-categories-row__button {
   background: var(--background-color-dark);
   color: var(--background-color-light);
 }
 
-.vg-taxonomy-row__title {
+.vg-categories-row__title {
   font-size: 24px;
   color: var(--main-color);
+  line-height: 1.6;
   letter-spacing: 1.2px;
 }
 
-.vg-taxonomy-row__button {
+.vg-categories-row__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1095,16 +1104,16 @@ body.vg-sidebar-open {
   white-space: nowrap;
 }
 
-.vg-taxonomy-row_selected {
+.vg-categories-row_selected {
   font-weight: 700;
 }
 
-.vg-taxonomy-row_selected .vg-taxonomy-row__button {
+.vg-categories-row_selected .vg-categories-row__button {
   background: var(--background-color-dark);
   color: var(--background-color-light);
 }
 
-.vg-taxonomy-posts-list-wrapper {
+.vg-categories-posts-list-wrapper {
   position: absolute;
   top: 50px;
   right: 0;
@@ -1112,7 +1121,7 @@ body.vg-sidebar-open {
   width: 40%;
 }
 
-.vg-taxonomy-posts-list {
+.vg-categories-posts-list {
   display: none;
   position: sticky;
   top: 15px;
@@ -1122,11 +1131,11 @@ body.vg-sidebar-open {
   box-sizing: border-box;
 }
 
-.vg-taxonomy-posts-list_selected {
+.vg-categories-posts-list_selected {
   display: flex;
 }
 
-.vg-taxonomy-posts-list .vg-taxonomy-list__item {
+.vg-categories-posts-list .vg-categories-list__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1137,4 +1146,35 @@ body.vg-sidebar-open {
   color: var(--main-color);
   line-height: 1.2;
 }
-/* END TAXONOMY */
+/* END CATEGORIES */
+
+/* TAGS LIST */
+.vg-tags-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px 0;
+}
+
+.vg-tags-list-item {
+  flex: 1;
+  padding: 22px;
+  border: 1px solid var(--main-color);
+  font-family: var(--secondary-font);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--main-color);
+  text-align: center;
+}
+
+.vg-tags-list-item:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  text-decoration: none;
+}
+
+.vg-tags-list-item_active {
+  background: var(--background-color-dark);
+  color: var(--background-color-light);
+}
+/* END TAGS LIST */

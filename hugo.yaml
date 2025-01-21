@@ -15,9 +15,12 @@ menus:
     - name: Категории
       pageRef: /categories
       weight: 30
+    - name: Теги
+      pageRef: /tags
+      weight: 40
     - name: О блоге
       pageRef: /about
-      weight: 40
+      weight: 50
 
 params:
   social:
