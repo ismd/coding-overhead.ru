@@ -23,6 +23,7 @@ menus:
       weight: 50
 
 params:
+  sidebarDescription: "Привет, друг! Coding Overhead — это мой личный блог о&nbsp;современных технологиях и&nbsp;полезных утилитах."
   social:
     youtube:
     github: "https://github.com/ismd"
@@ -46,7 +47,7 @@ params:
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/99606256" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
-  categories_to_posts_text: "к постам"
+  categoriesToPostsText: "к постам"
 
 markup:
   goldmark:

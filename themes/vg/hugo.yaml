@@ -21,13 +21,14 @@ menus:
       weight: 50
 
 params:
+  sidebarDescription: "Hello, friend! This is my personal blog about modern technologies and useful utilities."
   social:
     youtube: "https://youtube.com/"
     github: "https://github.com/"
     telegram: "https://t.me/"
     twitch: "https://twitch.tv/"
     discord: "https://discord.com/"
-  categories_to_posts_text: "to posts"
+  categoriesToPostsText: "to posts"
 
 markup:
   highlight:
