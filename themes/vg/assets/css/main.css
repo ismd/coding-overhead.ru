@@ -523,6 +523,7 @@ body.vg-sidebar-open {
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
+  color: var(--main-color);
 }
 
 .vg-post__title a {
