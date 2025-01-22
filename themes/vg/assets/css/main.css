@@ -774,7 +774,6 @@ body.vg-sidebar-open {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   width: 210px;
   height: 130px;
   padding: 20px 30px;
@@ -792,6 +791,11 @@ body.vg-sidebar-open {
   text-decoration: none;
 }
 
+.vg-home-blog-link__text {
+  position: relative;
+  z-index: 100;
+}
+
 @keyframes moveDownUp {
   0% {
     transform: translateY(0);
@@ -806,7 +810,7 @@ body.vg-sidebar-open {
 
 .vg-home-blog-link__arrow {
   position: relative;
-  overflow: hidden;
+  height: 50%;
 }
 
 .vg-home-blog-link__arrow svg {
