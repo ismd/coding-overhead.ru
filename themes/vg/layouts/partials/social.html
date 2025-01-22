@@ -39,9 +39,11 @@
   </a>
   {{ end }}
 
-  <a class="vg-social__item" href="{{ "rss.xml" | relURL }}" title="RSS" target="_blank">
+  {{ with .OutputFormats.Get "rss" -}}
+  <a class="vg-social__item" href="{{ .Permalink }}" title="RSS" target="_blank">
     {{ with resources.Get "icons/rss.svg" }}
     {{ .Content | safeHTML }}
     {{ end }}
   </a>
+  {{ end }}
 </div>
