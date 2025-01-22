@@ -82,17 +82,54 @@ document.addEventListener("DOMContentLoaded", function() {
     const postsList = document.querySelectorAll('.vg-post');
 
     if (tagsList) {
+        // Check if tags are selected in URL
+        const url = new URL(window.location.href);
+        const urlParams = new URLSearchParams(url.search);
+        const urlTags = urlParams.get('tags') ? urlParams.get('tags').split(',') : [];
+
+        if (urlTags.length > 0) {
+            tagsList.forEach(tag => {
+                const currentTag = tag.getAttribute('data-tag');
+                if (urlTags.includes(currentTag)) {
+                    tag.classList.add('vg-tags-list-item_active');
+                    selectedTags.add(currentTag);
+                }
+            });
+
+            postsList.forEach(post => {
+                const tags = post.getAttribute('data-tags').split(' ');
+                const visible = urlTags.every(tag => tags.includes(tag));
+
+                post.classList.toggle('vg-post_visible', visible);
+            });
+        }
+
         tagsList.forEach(tag => {
             tag.addEventListener('click', () => {
                 tag.classList.toggle('vg-tags-list-item_active');
 
                 const currentTag = tag.getAttribute('data-tag');
+                const url = new URL(window.location.href);
+                const urlParams = new URLSearchParams(url.search);
+                let urlTags = urlParams.get('tags') ? urlParams.get('tags').split(',') : [];
+
                 if (selectedTags.has(currentTag)) {
                     selectedTags.delete(currentTag);
+                    urlTags = urlTags.filter(t => t !== currentTag);
                 } else {
                     selectedTags.add(currentTag);
+                    urlTags.push(currentTag);
                 }
 
+                if (urlTags.length > 0) {
+                    urlParams.set('tags', urlTags.join(','));
+                } else {
+                    urlParams.delete('tags');
+                }
+
+                window.history.replaceState({}, '', `${url.pathname}?${urlParams.toString()}`);
+
+                // Update visible posts
                 if (selectedTags.size === 0) {
                     postsList.forEach(post => post.classList.remove('vg-post_visible'));
                     return;
