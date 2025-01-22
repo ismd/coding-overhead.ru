@@ -1,7 +1,5 @@
-<a href="javascript:void(0);" class="vg-home-social">
-  <div class="vg-home-social__header">
-    Следующий вебинар
-  </div>
+<a href="{{ .Params.nextEventLink }}" class="vg-home-social">
+  <div class="vg-home-social__header">{{ .Params.nextEventHeading }}</div>
 
   <div class="vg-home-social-content">
     <div class="vg-home-social-content-item">
@@ -9,7 +7,7 @@
     </div>
 
     <div class="vg-home-social-content__center">
-      {{ with resources.Get "icons/home-youtube.svg" }}
+      {{ with resources.Get .Params.nextEventIcon }}
       {{ .Content | safeHTML }}
       {{ end }}
     </div>
