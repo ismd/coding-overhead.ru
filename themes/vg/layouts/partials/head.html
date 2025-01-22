@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 
-{{ with .Site.Params.metric_script_inline }}
+{{ with .Site.Params.custom_script_inline }}
 {{ . | safeHTML }}
 {{ end }}
 
@@ -24,3 +24,5 @@
 
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
+
+{{ template "_internal/opengraph.html" . }}
