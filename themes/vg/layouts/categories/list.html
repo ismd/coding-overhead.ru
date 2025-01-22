@@ -2,8 +2,8 @@
 <div class="vg-categories">
   <div class="vg-categories-list">
     {{ range .Pages }}
-    <a href="javascript:void(0);" class="vg-categories-row" data-target="{{ .RelPermalink }}">
-      <div class="vg-categories-row__title">{{ .LinkTitle }}</div>
+    <a href="javascript:void(0);" class="vg-categories-row" data-target="{{ .Name }}">
+      <div class="vg-categories-row__title">{{ .Name }}</div>
       <div class="vg-categories-row__button">to posts</div>
     </a>
     {{ end }}
@@ -11,7 +11,7 @@
 
   <div class="vg-categories-posts-list-wrapper">
     {{ range .Pages }}
-    <div data-id="{{ .RelPermalink }}" class="vg-categories-posts-list">
+    <div data-id="{{ .Name }}" class="vg-categories-posts-list">
       {{ range .Pages }}
       <a href="{{ .RelPermalink }}" class="vg-categories-list__item">
         {{ with .Resources.GetMatch "cover.png" }}
@@ -19,7 +19,7 @@
         <img src="{{ $resized.RelPermalink }}" alt="{{ .Title }}" class="vg-categories-list__item-image" />
         {{ end }}
 
-        {{ .LinkTitle }}
+        {{ .Title }}
       </a>
       {{ end }}
     </div>
