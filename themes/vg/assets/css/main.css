@@ -8,12 +8,10 @@
   --background-color-dark: #5E7181;
 }
 
-a {
+a,
+a:hover,
+a:-webkit-any-link {
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 a:visited {
@@ -282,6 +280,15 @@ body.vg-sidebar-open {
 
 .pagination .page-item.disabled {
   color: var(--background-color-dark);
+}
+
+.vg-404 {
+  padding: 80px;
+  text-align: center;
+}
+
+.vg-404__link {
+  color: var(--main-color);
 }
 
 @media (max-width: 1024px) {
