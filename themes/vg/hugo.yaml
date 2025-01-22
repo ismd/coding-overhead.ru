@@ -27,6 +27,7 @@ params:
     telegram: "https://t.me/"
     twitch: "https://twitch.tv/"
     discord: "https://discord.com/"
+  categories_to_posts_text: "to posts"
 
 markup:
   highlight:

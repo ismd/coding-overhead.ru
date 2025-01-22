@@ -8,14 +8,12 @@
   --background-color-dark: #5E7181;
 }
 
-a,
-a:hover,
-a:-webkit-any-link {
+a {
   text-decoration: none;
 }
 
-a:visited {
-  color: inherit;
+a:hover {
+  text-decoration: underline;
 }
 
 p {
