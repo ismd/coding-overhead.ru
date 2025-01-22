@@ -1,7 +1,7 @@
 baseURL: https://coding-overhead.ru/
 languageCode: ru
 title: Coding Overhead
-theme: vg
+theme: hugo-theme-vng-blue
 enableRobotsTXT: true
 
 menus:
