@@ -24,11 +24,16 @@ menus:
 
 params:
   social:
-    youtube:
+    discord:
+    facebook:
     github: "https://github.com/ismd"
+    instagram:
+    linkedin: "https://www.linkedin.com/in/ismdev/"
     telegram:
     twitch: "https://www.twitch.tv/codingoverhead"
-    discord:
+    whatsapp:
+    x:
+    youtube: "https://www.youtube.com/@CodingOverhead"
   custom_script_inline: |
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
