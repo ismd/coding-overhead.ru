@@ -101,7 +101,7 @@ $ gsettings set org.gnome.desktop.interface icon-theme 'Qogir'
 
 ```
 Widget theme: Fluent-Light
-Default font: Noto Sans Regular 11
+Default font: NotoSans Nerd Font Regular 12
 Icon theme: Qogir
 Mouse cursor: BreezeX-Dark
 Cursor size: 28
