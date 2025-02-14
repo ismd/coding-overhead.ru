@@ -34,6 +34,7 @@ params:
     whatsapp:
     x:
     youtube: "https://www.youtube.com/@CodingOverhead"
+
   custom_script_inline: |
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
@@ -51,10 +52,11 @@ params:
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/99606256" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+
+  homeEventPosition: "top"
   homeToBlogText: "К&nbsp;блогу"
   description: "Привет, друг! Coding Overhead — это мой личный блог о&nbsp;современных технологиях и&nbsp;полезных утилитах."
   mailMeText: "Написать&nbsp;мне"
-  categoriesToPostsText: "к&nbsp;постам"
 
 markup:
   goldmark:
