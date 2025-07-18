@@ -18,7 +18,7 @@ draft: true
 yay -S qogir-icon-theme
 #+end_src
 
-В EndeavourOS, который я использую, иконки Qogir уже предустановлены в пакете =eos-qogir-icons=.
+В [[https://endeavouros.com/][EndeavourOS]], который я использую, иконки Qogir уже предустановлены в пакете =eos-qogir-icons=.
 
 * Настройка Status bar
 В Hyprland есть несколько вариантов статус-баров, в [[https://wiki.hyprland.org/Useful-Utilities/Status-Bars/][официальной вики]] перечислены некоторые из них. Самым популярным является [[https://github.com/Alexays/Waybar][Waybar]], на нём я и остановился. Он поддерживает множество модулей, которые можно настраивать в файле конфигурации. Мой конфиг можно найти [[https://github.com/ismd/dotfiles/tree/master/conf/config/waybar][здесь]]. На момент написания статьи из кастомных модулей в конфиге я использовал =custom/weather=, для которого необходима установленная утилита =wttrbar=. Остальные модули являются стандартными.
