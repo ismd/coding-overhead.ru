@@ -53,7 +53,7 @@ params:
     <noscript><div><img src="https://mc.yandex.ru/watch/99606256" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 
-  homeEventPosition: "top"
+  homeEventPosition: "none"
   homeToBlogText: "К&nbsp;блогу"
   description: "Привет, друг! Coding Overhead — это мой личный блог о&nbsp;современных технологиях и&nbsp;полезных утилитах."
   mailMeText: "Написать&nbsp;мне"
