@@ -13,14 +13,27 @@ This is a Hugo static site generator project for a Russian-language technology b
 # Build the static site
 hugo
 
-# Start development server with live reload
-hugo server -D
+# Start development server with live reload and drafts
+hugo server -D --bind 0.0.0.0
+
+# Start development server without drafts
+hugo server
 
 # Build for production (outputs to public/)
 hugo --minify
+
+# Clean generated resources and public directory
+rm -rf public/ resources/_gen/
 ```
 
 ### Deployment
+```bash
+# Deploy to AWS S3 (requires AWS CLI configuration)
+hugo deploy --target production
+
+# Build and deploy in one command
+hugo --minify && hugo deploy --target production
+```
 The site is configured to deploy to AWS S3 (s3://coding-overhead.ru) as specified in hugo.yaml deployment configuration.
 
 ### Content Management
@@ -69,6 +82,7 @@ hugo new posts/[post-name]/index.org
 ## Content Creation Guidelines
 
 ### Front Matter Structure
+Standard Markdown posts use YAML front matter:
 ```yaml
 ---
 title: "Post Title"
@@ -82,6 +96,8 @@ date: 2024-01-01T12:00:00
 draft: false
 ---
 ```
+
+Org mode posts (.org files) use the same YAML front matter format at the beginning of the file.
 
 ### Image Handling
 - Place images in post directories alongside content
@@ -106,5 +122,25 @@ The vng-blue theme can be customized through:
 
 - Generated files in `public/` directory (ignored in git)
 - Resources cache in `resources/_gen/` (can be cleared if needed)
-- Theme is included as git submodule
+- Theme is included as git submodule at `themes/vng-blue/`
 - No package.json or Node.js dependencies - pure Hugo project
+- Site uses Russian language and content
+- Yandex.Metrika analytics configured in hugo.yaml
+
+## Git Submodule Management
+
+The theme is managed as a git submodule:
+```bash
+# Update theme submodule
+git submodule update --remote themes/vng-blue
+
+# Initialize submodules (if cloning fresh repo)
+git submodule update --init --recursive
+```
+
+## Org Mode Support
+
+- Org mode files (.org) are supported alongside Markdown
+- Use Emacs Org mode syntax for content structure
+- Internal links use `[[denote:ID][description]]` format
+- Code blocks use `#+begin_src` and `#+end_src`
