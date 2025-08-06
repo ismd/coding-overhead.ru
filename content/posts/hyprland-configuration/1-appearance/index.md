@@ -72,7 +72,7 @@ env = XCURSOR_THEME,BreezeX-Dark
 А&nbsp;также выполнил команду из&nbsp;документации:
 
 ```console
-$ gsettings set org.gnome.desktop.interface cursor-theme 'BreezeX-Dark'
+$ gsettings set org.gnome.desktop.interface cursor-theme "BreezeX-Dark"
 ```
 
 # Иконки
@@ -84,7 +84,7 @@ $ gsettings set org.gnome.desktop.interface cursor-theme 'BreezeX-Dark'
 Указал иконки через `gsettings`:
 
 ```console
-$ gsettings set org.gnome.desktop.interface icon-theme 'Qogir'
+$ gsettings set org.gnome.desktop.interface icon-theme "Qogir"
 ```
 
 Благодаря `QT_QPA_PLATFORMTHEME=gtk3`, которую я&nbsp;добавил в&nbsp;разделе&nbsp;Qt, для Qt-приложений также используется тема иконок Qogir.
