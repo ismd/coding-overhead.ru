@@ -91,21 +91,17 @@ $ gsettings set org.gnome.desktop.interface icon-theme 'Qogir'
 
 # Шрифты
 
-В&nbsp;качестве шрифта выбрал Noto Sans Regular. Указать его можно через `nwg-look`, про который написал ниже.
+В&nbsp;качестве шрифта выбрал Noto Sans Regular. Указать можно через `gsettings`:
+
+```console
+gsettings set org.gnome.desktop.interface font-name "NotoSans Nerd Font 12"
+```
 
 # nwg-look
 
 [nwg-look](https://github.com/nwg-piotr/nwg-look)&nbsp;&mdash; это утилита для настройки GTK. С&nbsp;помощью неё можно задать внешний вид, цвета, курсор, шрифты, а&nbsp;также темы иконок. Напомню, что&nbsp;Qt настроил так, чтобы использовалась тема GTK.
 
-`nwg-look` при открытии подставляет свои сохранённые значения, а&nbsp;не&nbsp;берёт их&nbsp;из&nbsp;конфига GTK. Это означает, что при сохранении настроек в `nwg-look` они перетрут всё, что мы&nbsp;настраивали до&nbsp;этого вручную. Поэтому я&nbsp;задал дополнительно все те&nbsp;настройки, которые указывал до&nbsp;этого, также и&nbsp;в `nwg-look`:
-
-```
-Widget theme: Fluent-Light
-Default font: NotoSans Nerd Font Regular 12
-Icon theme: Qogir
-Mouse cursor: BreezeX-Dark
-Cursor size: 28
-```
+`nwg-look` при открытии подставляет свои сохранённые значения, а&nbsp;не&nbsp;берёт их&nbsp;из&nbsp;конфига GTK. Это означает, что при сохранении настроек в `nwg-look` они перетрут всё, что мы&nbsp;настраивали до&nbsp;этого вручную. По&nbsp;этой причине не&nbsp;рекомендую использовать эту утилиту, достаточно только конфигов и `gsettings`.
 
 # Заключение
 
