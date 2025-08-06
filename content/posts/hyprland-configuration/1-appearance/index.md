@@ -94,7 +94,7 @@ $ gsettings set org.gnome.desktop.interface icon-theme 'Qogir'
 В&nbsp;качестве шрифта выбрал Noto Sans Regular. Указать можно через `gsettings`:
 
 ```console
-gsettings set org.gnome.desktop.interface font-name "NotoSans Nerd Font 12"
+$ gsettings set org.gnome.desktop.interface font-name "NotoSans Nerd Font 12"
 ```
 
 # nwg-look
