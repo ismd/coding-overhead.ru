@@ -37,7 +37,7 @@ params:
     - title: Путешествия
       level: 70
     - title: Решение CTF
-      level: 30  
+      level: 30
 ---
 
 Coding Overhead&nbsp;&mdash; это мой личный блог о&nbsp;GNU/Linux, DevOps, Platform Engineering, программировании, полезных утилитах и&nbsp;многом другом из&nbsp;мира IT. Я&nbsp;пишу о&nbsp;том, что интересно мне, и&nbsp;надеюсь, что это будет интересно и&nbsp;вам. Многие из&nbsp;статей оформлены в&nbsp;виде заметок или шпаргалок, но&nbsp;в&nbsp;наличии есть и&nbsp;полноценные статьи с&nbsp;детальным разбором.
