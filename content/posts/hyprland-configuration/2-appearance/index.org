@@ -14,8 +14,8 @@ draft: true
 
 * Иконки
 Мой выбор пал на популярную тему иконок [[https://github.com/vinceliuice/Qogir-icon-theme][Qogir]], потому что мне нравятся плоские иконки. Для установки темы из AUR выполнил команду:
-#+begin_src sh
-yay -S qogir-icon-theme
+#+begin_src console
+$ yay -S qogir-icon-theme
 #+end_src
 
 В [[https://endeavouros.com/][EndeavourOS]], который я использую, иконки Qogir уже предустановлены в пакете =eos-qogir-icons=.
@@ -31,8 +31,8 @@ yay -S qogir-icon-theme
 Установка и запуск стандартные: =yay -S mako= и добавление =exec-once = mako= в =hyprland.conf=. Несмотря на то, что рекомендуется не запускать явно демон уведомлений (ни =mako=, ни =dunst=), я предпочитаю запускать его явно, чтобы не было конфликтов, если установлены оба демона.
 
 Вместе с демоном =mako= устанавливается утилита =makoctl=, с помощью которой можно управлять уведомлениями. Например, полезная команда для вывода истории уведомлений:
-#+begin_src sh
-makoctl history
+#+begin_src console
+$ makoctl history
 #+end_src
 
 * Блокировщик экрана
