@@ -16,20 +16,20 @@ int_var = 42
 float_var = 3.14
 bool_var = True
 
-list_var = [1, 2, 3, "four", 5.0] # Mutable
-tuple_var = (1, 2, 3) # Immutable
+list_var = [1, 2, 3, "four", 5.0]  # Mutable
+tuple_var = (1, 2, 3)  # Immutable
 dict_var = {"name": "Alice", "age": 30, "is_student": False}
 set_var = {1, 2, 3, 4, 5}
 ```
 
 ## Type Casting
 ```python
-str(int_var) # Converts int to string
-int(float_var) # Converts float to int
-float(int_var) # Converts int to float
-bool_var = bool(1) # Converts integer to boolean (1 is True, 0 is False)
-list_var = list(set_var) # Converts set to list
-tuple_var = tuple(list_var) # Converts list to tuple
+str(int_var)  # Converts int to string
+int(float_var)  # Converts float to int
+float(int_var)  # Converts int to float
+bool_var = bool(1)  # Converts integer to boolean (1 is True, 0 is False)
+list_var = list(set_var)  # Converts set to list
+tuple_var = tuple(list_var)  # Converts list to tuple
 ```
 
 ## User Input
@@ -39,31 +39,31 @@ user_input = input("Enter something: ")
 
 ## Arithmetic Operations
 ```python
-friend = 0
-friends += 1 # Increment
-friend -= 1 # Decrement
-friend *= 2 # Multiply
-friend /= 2 # Divide
-friend %= 2 # Modulus
-friend **= 2 # Exponentiation
-friend //= 2 # Floor division
+friends = 0
+friends += 1  # Increment
+friends -= 1  # Decrement
+friends *= 2  # Multiply
+friends /= 2  # Divide
+friends %= 2  # Modulus
+friends **= 2  # Exponentiation
+friends //= 2  # Floor division
 
-round_value = round(3.14159, 2) # Rounds to 2 decimal places
-abs_value = abs(-5) # Absolute value
-pow_value = pow(2, 3) # 2 raised to the power of 3
-max_value = max(1, 2, 3) # Maximum value
-min_value = min(1, 2, 3) # Minimum value
+round_value = round(3.14159, 2)  # Rounds to 2 decimal places
+abs_value = abs(-5)  # Absolute value
+pow_value = pow(2, 3)  # 2 raised to the power of 3
+max_value = max(1, 2, 3)  # Maximum value
+min_value = min(1, 2, 3)  # Minimum value
 
 import math
-math.pi # Pi constant
-math.e # Euler's number
-math.sqrt(16) # Square root
-math.ceil(4.2) # Ceiling value
-math.floor(4.8) # Floor value
+math.pi  # Pi constant
+math.e  # Euler's number
+math.sqrt(16)  # Square root
+math.ceil(4.2)  # Ceiling value
+math.floor(4.8)  # Floor value
 
 # Example
-circumference = 2 * math.pi * 5 # Circumference of a circle with radius 5
-area = math.pi * pow(5, 2) # Area of a circle with radius 5
+circumference = 2 * math.pi * 5  # Circumference of a circle with radius 5
+area = math.pi * pow(5, 2)  # Area of a circle with radius 5
 ```
 
 ## Comparison Operations
@@ -98,25 +98,25 @@ else:
 
 ## String Methods
 ```python
-"Hello, World!".find("World") # Returns the index of "World" in the string
-"Hello, World!".rfind("World") # Returns the index of "World" in the string, searching from the end
-"Hello, World!".capitalize() # Capitalizes the first letter of the string
-"Hello, World!".upper() # Converts the string to uppercase
-"Hello, World!".lower() # Converts the string to lowercase
-"Hello, World!".isdigit() # Checks if the string contains only digits
-"Hello, World!".isalpha() # Checks if the string contains only alphabetic characters
-"Hello, World!".count("o") # Counts occurrences of "o" in the string
-"Hello, World!".replace("World", "Python") # Replaces "World" with "Python"
+"Hello, World!".find("World")  # Returns the index of "World" in the string
+"Hello, World!".rfind("World")  # Returns the index of "World" in the string, searching from the end
+"Hello, World!".capitalize()  # Capitalizes the first letter of the string
+"Hello, World!".upper()  # Converts the string to uppercase
+"Hello, World!".lower()  # Converts the string to lowercase
+"Hello, World!".isdigit()  # Checks if the string contains only digits
+"Hello, World!".isalpha()  # Checks if the string contains only alphabetic characters
+"Hello, World!".count("o")  # Counts occurrences of "o" in the string
+"Hello, World!".replace("World", "Python")  # Replaces "World" with "Python"
 ```
 
 ## String Indexing
 ```python
 string_var = "Hello, World!"
-first_char = string_var[0] # 'H'
-last_char = string_var[-1] # '!'
-substring = string_var[0:5] # 'Hello'
-substring_from_end = string_var[-6:] # 'World!'
-reversed_string = string_var[::-1] # '!dlroW ,olleH'
+first_char = string_var[0]  # 'H'
+last_char = string_var[-1]  # '!'
+substring = string_var[0:5]  # 'Hello'
+substring_from_end = string_var[-6:]  # 'World!'
+reversed_string = string_var[::-1]  # '!dlroW ,olleH'
 ```
 
 ## Format Specifiers
@@ -127,12 +127,12 @@ price3 = 12.34
 
 f"Price 1: {price1:.2f}, Price 2: {price2:.2f}, Price 3: {price3:.2f}"
 f"Price 1: {price1:10}, Price 2: {price2:10}, Price 3: {price3:10}"
-f"Price 1: {price1:<10}, Price 2: {price2:<10}, Price 3: {price3:<10}" # Left aligned
-f"Price 1: {price1:>10}, Price 2: {price2:>10}, Price 3: {price3:>10}" # Right aligned
-f"Price 1: {price1:^10}, Price 2: {price2:^10}, Price 3: {price3:^10}" # Centered
-f"Price 1: {price1:+}, Price 2: {price2:+}, Price 3: {price3:+}" # Show sign
-f"Price 1: {price1: }, Price 2: {price2: }, Price 3: {price3: }" # Space for sign
-f"Price 1: {price1:,}, Price 2: {price2:,}, Price 3: {price3:,}" # Thousands separator
+f"Price 1: {price1:<10}, Price 2: {price2:<10}, Price 3: {price3:<10}"  # Left aligned
+f"Price 1: {price1:>10}, Price 2: {price2:>10}, Price 3: {price3:>10}"  # Right aligned
+f"Price 1: {price1:^10}, Price 2: {price2:^10}, Price 3: {price3:^10}"  # Centered
+f"Price 1: {price1:+}, Price 2: {price2:+}, Price 3: {price3:+}"  # Show sign
+f"Price 1: {price1: }, Price 2: {price2: }, Price 3: {price3: }"  # Space for sign
+f"Price 1: {price1:,}, Price 2: {price2:,}, Price 3: {price3:,}"  # Thousands separator
 ```
 
 ## While Loops
@@ -153,73 +153,73 @@ while True:
 ## For Loops
 ```python
 for i in range(5):
-    print(i) # Prints numbers from 0 to 4
+    print(i)  # Prints numbers from 0 to 4
 
 for i in reversed(range(5)):
-    print(i) # Prints numbers from 4 to 0
+    print(i)  # Prints numbers from 4 to 0
 
 for i in range(1, 10, 2):
-    print(i) # Prints odd numbers from 1 to 9
+    print(i)  # Prints odd numbers from 1 to 9
 
 for char in "Hello":
-    print(char) # Prints each character in the string "Hello
+    print(char)  # Prints each character in the string "Hello"
 ```
 
 ## Nested Loops
 ```python
 for i in range(3):
     for j in range(2):
-        print(f"i: {i}, j: {j}") # Prints combinations of i and j
+        print(f"i: {i}, j: {j}")  # Prints combinations of i and j
 ```
 
 ## Collections
 ```python
 # List
 my_list = [1, 2, 3, 4, 5]
-my_list.append(6) # Adds 6 to the end of the list
-my_list.remove(3) # Removes the first occurrence of 3 from the list
-my_list.insert(2, 2.5) # Inserts 2.5 at index 2
-my_list.sort() # Sorts the list in ascending order
-my_list.reverse() # Reverses the order of the list
-my_list.clear() # Removes all elements from the list
-my_list.index(4) # Returns the index of the first occurrence of 4
-my_list.count(2) # Returns the number of occurrences of 2 in the list
+my_list.append(6)  # Adds 6 to the end of the list
+my_list.remove(3)  # Removes the first occurrence of 3 from the list
+my_list.insert(2, 2.5)  # Inserts 2.5 at index 2
+my_list.sort()  # Sorts the list in ascending order
+my_list.reverse()  # Reverses the order of the list
+my_list.clear()  # Removes all elements from the list
+my_list.index(4)  # Returns the index of the first occurrence of 4
+my_list.count(2)  # Returns the number of occurrences of 2 in the list
 
 # Tuple
-my_tuple = (1, 2, 3, 4, 5) # Tuples are immutable, so you cannot modify them after creation
+my_tuple = (1, 2, 3, 4, 5)  # Tuples are immutable, so you cannot modify them after creation
 
 # Set
 my_set = {1, 2, 3, 4, 5}
-my_set.add(6) # Adds 6 to the set
-my_set.remove(3) # Removes 3 from the set
-my_set.union({7, 8}) # Combines two sets
-my_set.intersection({2, 3, 4}) # Finds common elements in two sets
-my_set.difference({2, 3}) # Finds elements in the first set that are not in the second set
+my_set.add(6)  # Adds 6 to the set
+my_set.remove(3)  # Removes 3 from the set
+my_set.union({7, 8})  # Combines two sets
+my_set.intersection({2, 3, 4})  # Finds common elements in two sets
+my_set.difference({2, 3})  # Finds elements in the first set that are not in the second set
 
 # Dictionary
 my_dict = {"name": "Alice", "age": 30, "is_student": False}
-my_dict["city"] = "New York" # Adds a new key-value pair
-my_dict["age"] = 31 # Updates the value for the key "age"
-my_dict.update({"country": "USA"}) # Updates the dictionary with new key-value pairs
-my_dict.pop("is_student") # Removes the key "is_student" and its value
-my_dict.popitem() # Removes and returns the last inserted key-value pair
-my_dict.keys() # Returns a view of the keys in the dictionary
-my_dict.values() # Returns a view of the values in the dictionary
-my_dict.items() # Returns a view of the key-value pairs in the dictionary
-my_dict.get("name") # Returns the value for the key "name"
-my_dict.get("nonexistent_key", "default_value") # Returns "default_value" if the key does not exist
+my_dict["city"] = "New York"  # Adds a new key-value pair
+my_dict["age"] = 31  # Updates the value for the key "age"
+my_dict.update({"country": "USA"})  # Updates the dictionary with new key-value pairs
+my_dict.pop("is_student")  # Removes the key "is_student" and its value
+my_dict.popitem()  # Removes and returns the last inserted key-value pair
+my_dict.keys()  # Returns a view of the keys in the dictionary
+my_dict.values()  # Returns a view of the values in the dictionary
+my_dict.items()  # Returns a view of the key-value pairs in the dictionary
+my_dict.get("name")  # Returns the value for the key "name"
+my_dict.get("nonexistent_key", "default_value")  # Returns "default_value" if the key does not exist
 ```
 
 ## Random
 ```python
 import random
-random.randint(1, 10) # Returns a random integer between 1 and 10 (inclusive)
-random.choice([1, 2, 3, 4, 5]) # Returns a random element from the list
-random.shuffle([1, 2, 3, 4, 5]) # Shuffles the list in place
-random.sample([1, 2, 3, 4, 5], 3) # Returns a list of 3 unique random elements from the list
-random.uniform(1.0, 10.0) # Returns a random float between 1.0 and 10.0
-random.seed(42) # Sets the seed for reproducibility
-random.random() # Returns a random float between 0.0 and 1.0
+random.randint(1, 10)  # Returns a random integer between 1 and 10 (inclusive)
+random.choice([1, 2, 3, 4, 5])  # Returns a random element from the list
+random.shuffle([1, 2, 3, 4, 5])  # Shuffles the list in place
+random.sample([1, 2, 3, 4, 5], 3)  # Returns a list of 3 unique random elements from the list
+random.uniform(1.0, 10.0)  # Returns a random float between 1.0 and 10.0
+random.seed(42)  # Sets the seed for reproducibility
+random.random()  # Returns a random float between 0.0 and 1.0
 ```
 
 ## Functions
@@ -266,9 +266,9 @@ def print_info(**kwargs):
 
 ## List Comprehensions
 ```python
-squares = [x**2 for x in range(10)] # List of squares from 0 to 9
-evens = [x for x in range(10) if x % 2 == 0] # List of even numbers from 0 to 9
-squares_and_evens = [(x, x**2) for x in range(10) if x % 2 == 0] # List of tuples (number, square) for even numbers
+squares = [x**2 for x in range(10)]  # List of squares from 0 to 9
+evens = [x for x in range(10) if x % 2 == 0]  # List of even numbers from 0 to 9
+squares_and_evens = [(x, x**2) for x in range(10) if x % 2 == 0]  # List of tuples (number, square) for even numbers
 ```
 
 ## Match-Case Statement (switch)
@@ -324,13 +324,13 @@ class Dog:
         
 my_dog = Dog("Buddy")
 
-my_dog.bark() # Outputs: Buddy says Woof!
-print(Dog.get_dogs_count()) # Outputs: 1
-print(Dog.is_domestic()) # Outputs: True
-print(my_dog.name) # Outputs: Buddy
+my_dog.bark()  # Outputs: Buddy says Woof!
+print(Dog.get_dogs_count())  # Outputs: 1
+print(Dog.is_domestic())  # Outputs: True
+print(my_dog.name)  # Outputs: Buddy
 
 my_dog1 = Dog("Max")
-print(Dog.dogs_count) # Outputs: 2
+print(Dog.dogs_count)  # Outputs: 2
 ```
 
 ## Inheritance
@@ -352,8 +352,8 @@ class Cat(Animal):
 
 my_dog = Dog("Buddy")
 my_cat = Cat("Whiskers")
-print(my_dog.speak()) # Outputs: Buddy says Woof!
-print(my_cat.speak()) # Outputs: Whiskers says Meow!
+print(my_dog.speak())  # Outputs: Buddy says Woof!
+print(my_cat.speak())  # Outputs: Whiskers says Meow!
 ```
 
 ## Multiple Inheritance
@@ -371,9 +371,9 @@ class Duck(Flyer, Swimmer):
         return "Quack!"
 
 my_duck = Duck()
-print(my_duck.fly()) # Outputs: Flying
-print(my_duck.swim()) # Outputs: Swimming
-print(my_duck.quack()) # Outputs: Quack!
+print(my_duck.fly())  # Outputs: Flying
+print(my_duck.swim())  # Outputs: Swimming
+print(my_duck.quack())  # Outputs: Quack!
 ```
 
 ## Super
@@ -387,16 +387,16 @@ class Animal:
 
 class Dog(Animal):
     def __init__(self, name, breed):
-        super().__init__(name) # Call the constructor of the parent class
+        super().__init__(name)  # Call the constructor of the parent class
         self.breed = breed
         
     def speak(self):
         return f"{self.name} the {self.breed} says Woof!"
 
 my_dog = Dog("Buddy", "Golden Retriever")
-print(my_dog.speak()) # Outputs: Buddy the Golden Retriever says Woof!
-print(my_dog.name) # Outputs: Buddy
-print(my_dog.breed) # Outputs: Golden Retriever
+print(my_dog.speak())  # Outputs: Buddy the Golden Retriever says Woof!
+print(my_dog.name)  # Outputs: Buddy
+print(my_dog.breed)  # Outputs: Golden Retriever
 ```
 
 ## Polymorphism
@@ -421,8 +421,8 @@ def make_bird_fly(bird):
 
 my_penguin = Penguin()
 my_sparrow = Sparrow()
-make_bird_fly(my_penguin) # Outputs: Cannot fly, but swims
-make_bird_fly(my_sparrow) # Outputs: Flies gracefully
+make_bird_fly(my_penguin)  # Outputs: Cannot fly, but swims
+make_bird_fly(my_sparrow)  # Outputs: Flies gracefully
 ```
 
 ## Magic Methods
