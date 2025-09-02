@@ -143,24 +143,6 @@ The site uses a custom `vng-blue` theme with features:
 - HiDPI image support
 - Configurable home page layout
 
-### Key Configuration Options
-
-```yaml
-params:
-  social:
-    github: "username"
-    linkedin: "profile"
-    youtube: "channel"
-    twitch: "stream"
-  
-  analytics:
-    yandex_metrika_id: "your-id"
-  
-  home:
-    event_top_position: true
-    event_bottom_position: false
-```
-
 ## Deployment
 
 The site is configured for deployment to AWS S3:
