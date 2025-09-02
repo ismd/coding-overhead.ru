@@ -35,6 +35,9 @@ params:
     x:
     youtube: "https://www.youtube.com/@CodingOverhead"
 
+  giscus:
+    enable: true
+
   custom_script_inline: |
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
@@ -52,6 +55,23 @@ params:
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/99606256" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+
+    <script src="https://giscus.app/client.js"
+            data-repo="ismd/coding-overhead.ru"
+            data-repo-id="R_kgDOM8wE5g"
+            data-category="Announcements"
+            data-category-id="DIC_kwDOM8wE5s4Cu5WQ"
+            data-mapping="title"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="light"
+            data-lang="ru"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
 
   homeEventPosition: "none"
   homeToBlogText: "К&nbsp;блогу"
