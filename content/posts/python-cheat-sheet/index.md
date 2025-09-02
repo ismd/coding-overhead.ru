@@ -522,13 +522,20 @@ formatted_date = now.strftime("%Y-%m-%d %H:%M:%S")  # Format date and time
 ```python
 import threading
 
-def print_numbers():
-    for i in range(5):
+def print_numbers(number):
+    for i in range(number):
         print(i)
-        
-thread = threading.Thread(target=print_numbers)
-thread.start()
-thread.join()  # Wait for the thread to finish
+
+def print_letters():
+    for letter in 'abcde':
+        print(letter)
+
+thread1 = threading.Thread(target=print_numbers, args=(5,))
+thread2 = threading.Thread(target=print_letters)
+thread1.start()
+thread2.start()
+thread1.join()
+thread2.join()
 ```
 
 ## Requests
