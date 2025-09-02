@@ -6,7 +6,7 @@ categories:
 tags:
   - python
 date: 2025-08-21T10:28:49+02:00
-draft: true
+draft: false
 ---
 
 ## Variables and Data Types
