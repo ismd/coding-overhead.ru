@@ -181,9 +181,9 @@ my_list.remove(3)  # Removes the first occurrence of 3 from the list
 my_list.insert(2, 2.5)  # Inserts 2.5 at index 2
 my_list.sort()  # Sorts the list in ascending order
 my_list.reverse()  # Reverses the order of the list
-my_list.clear()  # Removes all elements from the list
 my_list.index(4)  # Returns the index of the first occurrence of 4
 my_list.count(2)  # Returns the number of occurrences of 2 in the list
+my_list.clear()  # Removes all elements from the list
 
 # Tuple
 my_tuple = (1, 2, 3, 4, 5)  # Tuples are immutable, so you cannot modify them after creation
@@ -403,7 +403,7 @@ print(my_dog.breed)  # Outputs: Golden Retriever
 ```python
 from abc import ABC, abstractmethod
 
-class Bird:
+class Bird(ABC):
     @abstractmethod
     def fly(self):
         pass
@@ -459,7 +459,8 @@ class Score:
         return self.points
         
     def __getitem__(self, index):
-        return self.points[index] if index < len(str(self.points)) else None
+        points_str = str(self.points)
+        return int(points_str[index]) if index < len(points_str) else None
 ```
 
 ## Decorators
@@ -467,8 +468,9 @@ class Score:
 def my_decorator(func):
     def wrapper(*args, **kwargs):
         print("Something is happening before the function is called.")
-        func(*args, **kwargs)
+        result = func(*args, **kwargs)
         print("Something is happening after the function is called.")
+        return result
 
     return wrapper
 
