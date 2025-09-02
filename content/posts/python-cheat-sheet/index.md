@@ -461,3 +461,85 @@ class Score:
     def __getitem__(self, index):
         return self.points[index] if index < len(str(self.points)) else None
 ```
+
+## Decorators
+```python
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Something is happening before the function is called.")
+        func(*args, **kwargs)
+        print("Something is happening after the function is called.")
+
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+```
+
+## Exceptions
+```python
+try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+except ValueError:
+    print("Invalid input. Please enter a valid integer.")
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+else:
+    print(f"Result is {result}")
+finally:
+    print("Execution completed.")
+```
+
+## File Handling
+```python
+# Writing to a file
+with open("example.txt", "w") as file:
+    file.write("Hello, World!\n")
+
+# Reading from a file
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+
+# Appending to a file
+with open("example.txt", "a") as file:
+    file.write("Appending a new line.\n")
+```
+
+## Date and Time
+```python
+import datetime
+
+now = datetime.datetime.now()  # Current date and time
+today = datetime.date.today()  # Current date
+time = datetime.datetime.now().time()  # Current time
+formatted_date = now.strftime("%Y-%m-%d %H:%M:%S")  # Format date and time
+```
+
+## Multithreading
+```python
+import threading
+
+def print_numbers():
+    for i in range(5):
+        print(i)
+        
+thread = threading.Thread(target=print_numbers)
+thread.start()
+thread.join()  # Wait for the thread to finish
+```
+
+## Requests
+```python
+import requests
+
+response = requests.get("https://api.github.com")
+if response.status_code == 200:
+    print("Success!")
+    data = response.json()
+    print(data)
+else:
+    print("Failed to retrieve data:", response.status_code)
+```
