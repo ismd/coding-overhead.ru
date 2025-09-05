@@ -3,10 +3,10 @@ title: Главная страница
 date: 2023-01-01T08:00:00-07:00
 draft: false
 nextEventHeading: "Следующий вебинар"
-nextEventDate: "24 сентября"
-nextEventTime: "19 : 00 MSK"
-nextEventTitle: "Hyprland: настраиваем тему оформления"
-nextEventLink: "https://youtube.com"
+nextEventDate: "8 сентября"
+nextEventTime: "22 : 00 MSK"
+nextEventTitle: "Настраиваем Quickshell"
+nextEventLink: "https://www.youtube.com/@CodingOverhead"
 nextEventIcon: "icons/home-youtube.svg"
 ---
 
