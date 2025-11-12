@@ -73,7 +73,7 @@ params:
             async>
     </script>
 
-  homeEventPosition: "top"
+  homeEventPosition: "none"
   homeToBlogText: "К&nbsp;блогу"
   description: "Привет, друг! Coding Overhead — это мой личный блог о&nbsp;современных технологиях и&nbsp;полезных утилитах."
   mailMeText: "Написать&nbsp;мне"
