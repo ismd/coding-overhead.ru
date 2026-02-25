@@ -88,4 +88,4 @@ markup:
 deployment:
   targets:
     - name: production
-      URL: s3://coding-overhead.ru
+      URL: s3://coding-overhead.ru?profile=coding-overhead.ru
