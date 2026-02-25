@@ -2,9 +2,9 @@
 title: "Мегабайты и мебибайты"
 summary: "Разница между мегабайтами (MB) и мебибайтами (MiB)."
 categories:
-  - Общая информация о Linux
+  - Основы IT
 tags:
-  - linux
+  - basics
 date: 2025-10-18T12:00:00+03:00
 draft: false
 ---
