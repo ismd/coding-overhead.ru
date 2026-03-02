@@ -51,4 +51,4 @@ TLS (Transport Layer Security) — криптографический прото
 
 ---
 
-Этот пост также доступен в [Telegram](https://t.me/CodingOverhead/8).
+Этот пост также доступен в [Telegram](https://t.me/CodingOverhead/8)

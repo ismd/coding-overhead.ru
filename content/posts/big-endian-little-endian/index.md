@@ -44,4 +44,4 @@ draft: false
 
 ---
 
-Этот пост также доступен в [Telegram](https://t.me/CodingOverhead/7).
+Этот пост также доступен в [Telegram](https://t.me/CodingOverhead/7)

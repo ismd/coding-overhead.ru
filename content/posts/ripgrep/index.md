@@ -57,4 +57,4 @@ $ rg -l "pattern"
 
 ---
 
-Этот пост также доступен в [Telegram](https://t.me/CodingOverhead/5).
+Этот пост также доступен в [Telegram](https://t.me/CodingOverhead/5)

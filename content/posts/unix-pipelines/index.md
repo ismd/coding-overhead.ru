@@ -46,4 +46,4 @@ $ <команда> > <имя файла> 2>&1
 
 ---
 
-Этот пост также доступен в [Telegram](https://t.me/CodingOverhead/4).
+Этот пост также доступен в [Telegram](https://t.me/CodingOverhead/4)

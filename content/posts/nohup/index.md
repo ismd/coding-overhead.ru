@@ -36,4 +36,4 @@ nohup ./script.sh > /dev/null 2>&1 &
 
 ---
 
-Этот пост также доступен в [Telegram](https://t.me/CodingOverhead/9).
+Этот пост также доступен в [Telegram](https://t.me/CodingOverhead/9)

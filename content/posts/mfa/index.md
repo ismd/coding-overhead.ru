@@ -45,4 +45,4 @@ MFA — необходимый минимум для любого важного
 
 ---
 
-Этот пост также доступен в [Telegram](https://t.me/CodingOverhead/11).
+Этот пост также доступен в [Telegram](https://t.me/CodingOverhead/11)

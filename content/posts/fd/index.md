@@ -59,4 +59,4 @@ alias fda='fd -H'    # включая скрытые
 
 ---
 
-Этот пост также доступен в [Telegram](https://t.me/CodingOverhead/6).
+Этот пост также доступен в [Telegram](https://t.me/CodingOverhead/6)
