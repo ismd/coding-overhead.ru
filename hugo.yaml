@@ -73,6 +73,17 @@ params:
             async>
     </script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF99R1ZB2Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VF99R1ZB2Z');
+    </script>
+
+
   homeEventPosition: "none"
   homeToBlogText: "К&nbsp;блогу"
   description: "Привет, друг! Coding Overhead — это мой личный блог о&nbsp;современных технологиях и&nbsp;полезных утилитах."
