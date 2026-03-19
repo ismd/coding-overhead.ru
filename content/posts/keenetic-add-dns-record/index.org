@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-В роутерах Keenetic есть возможность добавлять DNS-записи без развёртывания отдельного DNS-сервера. Процесс простой, однако есть серьёзный минус — записи не сохраняются после перезагрузки роутера.
+В роутерах Keenetic есть возможность добавлять DNS-записи без развёртывания отдельного DNS-сервера.
 
 1. Подключаемся к роутеру.
    #+begin_src console
@@ -22,5 +22,11 @@ draft: false
 
    #+begin_src console
    $ ip host <domain> <ip>
+   $ system configuration save
+   #+end_src
+
+3. Для удаления DNS-записи используйте команду =no ip host=.
+   #+begin_src console
+   $ no ip host <domain>
    $ system configuration save
    #+end_src
