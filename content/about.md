@@ -10,11 +10,11 @@ params:
   tabs:
     - title: Инструменты
       items:
+        - Kubernetes
         - Emacs
         - Docker
         - Git
         - Terraform
-        - Kubernetes
     - title: Языки
       items:
         - Python
