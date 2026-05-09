@@ -25,7 +25,7 @@ draft: false
    $ system configuration save
    #+end_src
 
-3. Для удаления DNS-записи используйте команду =no ip host=.
+3. Для удаления DNS-записи используем команду =no ip host=.
    #+begin_src console
    $ no ip host <domain>
    $ system configuration save
