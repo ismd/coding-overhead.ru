@@ -1,8 +1,13 @@
 baseURL: https://coding-overhead.ru/
 languageCode: ru
 title: Coding Overhead
-theme: vng-blue
+theme:
+  - github.com/ismd/hugo-theme-vng-blue
 enableRobotsTXT: true
+
+module:
+  imports:
+    - path: github.com/ismd/hugo-theme-vng-blue
 
 menus:
   main:
