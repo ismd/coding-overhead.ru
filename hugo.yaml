@@ -1,5 +1,5 @@
 baseURL: https://coding-overhead.ru/
-languageCode: ru
+defaultContentLanguage: ru
 title: Coding Overhead
 theme:
   - github.com/ismd/hugo-theme-vng-blue
