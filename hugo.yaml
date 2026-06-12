@@ -29,7 +29,7 @@ menus:
 
 params:
   social:
-    discord:
+    discord: "https://discord.gg/JTjbUVuNy"
     facebook:
     github: "https://github.com/ismd"
     instagram:
