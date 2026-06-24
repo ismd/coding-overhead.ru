@@ -101,6 +101,10 @@ markup:
   highlight:
     style: friendly
 
+caches:
+  images:
+    dir: :cacheDir/images
+
 deployment:
   targets:
     - name: production
