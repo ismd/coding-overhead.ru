@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Hugo static site generator project for a Russian-language technology blog called "Coding Overhead" (coding-overhead.ru). The site covers topics related to GNU/Linux, DevOps, Platform Engineering, programming, and useful utilities.
+This is a Hugo static site generator project for a Russian-language technology blog called "Coding Overhead" (coding-overhead.com). The site covers topics related to GNU/Linux, DevOps, Platform Engineering, programming, and useful utilities.
 
 ## Key Commands
 
@@ -34,7 +34,7 @@ hugo deploy --target production
 # Build and deploy in one command
 hugo --minify && hugo deploy --target production
 ```
-The site is configured to deploy to AWS S3 (s3://coding-overhead.ru) as specified in hugo.yaml deployment configuration.
+The site is configured to deploy to AWS S3 (s3://coding-overhead.com) as specified in hugo.yaml deployment configuration.
 
 ### Content Management
 ```bash

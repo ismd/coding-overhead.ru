@@ -2,7 +2,7 @@
 
 Russian-language technology blog covering GNU/Linux, DevOps, Platform Engineering, programming, and useful utilities.
 
-🌐 **Website**: [coding-overhead.ru](https://coding-overhead.ru)
+🌐 **Website**: [coding-overhead.com](https://coding-overhead.com)
 
 ## Project Overview
 
@@ -25,8 +25,8 @@ This is a Hugo static site generator project for the "Coding Overhead" blog. The
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/coding-overhead.ru.git
-cd coding-overhead.ru
+git clone https://github.com/yourusername/coding-overhead.com.git
+cd coding-overhead.com
 ```
 
 2. Initialize theme submodule:
@@ -147,7 +147,7 @@ The site uses a custom `vng-blue` theme with features:
 
 The site is configured for deployment to AWS S3:
 
-- **Bucket**: `s3://coding-overhead.ru`
+- **Bucket**: `s3://coding-overhead.com`
 - **CDN**: CloudFront distribution
 - **Domain**: Custom domain with Route 53
 

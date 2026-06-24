@@ -1,4 +1,4 @@
-module github.com/ismd/coding-overhead.ru
+module github.com/ismd/coding-overhead.com
 
 go 1.26.3
 
