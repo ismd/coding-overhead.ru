@@ -101,3 +101,6 @@ markup:
 caches:
   images:
     dir: :cacheDir/images
+
+permalinks:
+  posts: /posts/:contentbasename/
